@@ -407,7 +407,7 @@ class HomeScreen extends StatelessWidget {
                                                               .start,
                                                       children: [
                                                         Text(
-                                                          "Marina diamond, Dubai Marina",
+                                                          "NCP (National Car Parks)",
                                                           overflow: TextOverflow
                                                               .ellipsis,
                                                           textAlign:
@@ -541,7 +541,7 @@ class HomeScreen extends StatelessWidget {
                                                           .spaceBetween,
                                                   children: [
                                                     Text(
-                                                      "11 Apr, 2021",
+                                                      "30 Apr, 2023",
                                                       overflow:
                                                           TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
@@ -549,7 +549,7 @@ class HomeScreen extends StatelessWidget {
                                                           .txtMontserratMedium14Bluegray30003,
                                                     ),
                                                     Text(
-                                                      "12 Apr, 2021",
+                                                      "30 Apr, 2023",
                                                       overflow:
                                                           TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
@@ -573,19 +573,6 @@ class HomeScreen extends StatelessWidget {
                                                   alignment:
                                                       Alignment.bottomLeft,
                                                   children: [
-                                                    Align(
-                                                      alignment:
-                                                          Alignment.topRight,
-                                                      child: Text(
-                                                        "600 USD",
-                                                        overflow: TextOverflow
-                                                            .ellipsis,
-                                                        textAlign:
-                                                            TextAlign.left,
-                                                        style: AppStyle
-                                                            .txtMontserratSemiBold16,
-                                                      ),
-                                                    ),
                                                     Align(
                                                       alignment:
                                                           Alignment.bottomLeft,
@@ -739,14 +726,14 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Container(
                       height: getVerticalSize(
-                        270,
+                        220,
                       ),
                       width: getHorizontalSize(
                         359,
                       ),
                       margin: getMargin(
                         left: 16,
-                        top: 31,
+                        top: 71,
                         bottom: 5,
                       ),
                       child: Stack(
@@ -760,18 +747,18 @@ class HomeScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Previous parking",
+                                  "Parking Space",
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.left,
                                   style: AppStyle.txtSairaBold18,
                                 ),
                                 Container(
                                   height: getVerticalSize(
-                                    104,
+                                    150,
                                   ),
                                   child: ListView.separated(
                                     padding: getPadding(
-                                      top: 2,
+                                      top: 12,
                                     ),
                                     scrollDirection: Axis.horizontal,
                                     separatorBuilder: (context, index) {
@@ -789,99 +776,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Padding(
-                                    padding: getPadding(
-                                      right: 16,
-                                    ),
-                                    child: Text(
-                                      "View all",
-                                      overflow: TextOverflow.ellipsis,
-                                      textAlign: TextAlign.left,
-                                      style: AppStyle
-                                          .txtMontserratMedium14IndigoA200,
-                                    ),
-                                  ),
-                                ),
-                                CustomImageView(
-                                  svgPath: ImageConstant.imgPointer1,
-                                  height: getSize(
-                                    16,
-                                  ),
-                                  width: getSize(
-                                    16,
-                                  ),
-                                  margin: getMargin(
-                                    left: 160,
-                                    top: 80,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: getPadding(
-                                    top: 46,
-                                    right: 15,
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Cars",
-                                        overflow: TextOverflow.ellipsis,
-                                        textAlign: TextAlign.left,
-                                        style: AppStyle.txtSairaBold18,
-                                      ),
-                                      Padding(
-                                        padding: getPadding(
-                                          left: 250,
-                                          top: 1,
-                                          bottom: 9,
-                                        ),
-                                        child: Text(
-                                          "View all",
-                                          overflow: TextOverflow.ellipsis,
-                                          textAlign: TextAlign.left,
-                                          style: AppStyle
-                                              .txtMontserratMedium14IndigoA200,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  height: getVerticalSize(
-                                    78,
-                                  ),
-                                  child: ListView.separated(
-                                    padding: getPadding(
-                                      top: 5,
-                                    ),
-                                    scrollDirection: Axis.horizontal,
-                                    separatorBuilder: (context, index) {
-                                      return SizedBox(
-                                        height: getVerticalSize(
-                                          12,
-                                        ),
-                                      );
-                                    },
-                                    itemCount: 2,
-                                    itemBuilder: (context, index) {
-                                      return ListdirectionscItemWidget();
-                                    },
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                          )
                         ],
                       ),
                     ),

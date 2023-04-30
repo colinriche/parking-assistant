@@ -77,6 +77,21 @@ class ListsetpickuppoItemWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+
+                    Padding(
+                      padding: getPadding(
+                        right: 5,
+                      ),
+                      child:  Image.asset(
+                        'assets/images/img_group92.png',
+                        width: 60,
+                        height: 50,
+                        fit: BoxFit.fill,
+                      ),
+
+                    ),
+
+
                     Padding(
                       padding: getPadding(
                         top: 3,
@@ -85,8 +100,9 @@ class ListsetpickuppoItemWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
+
                           Text(
-                            "",
+                            "Parking text",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtRobotoMedium12,
@@ -96,10 +112,22 @@ class ListsetpickuppoItemWidget extends StatelessWidget {
                               top: 4,
                             ),
                             child: Text(
-                              "",
+                              "Parking text 2",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtRobotoMedium18,
+                            ),
+                          ),
+
+                          Padding(
+                            padding: getPadding(
+                              top: 4,
+                            ),
+                            child:  Text(
+                              "32.87909,72.5467565",
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.left,
+                              style: AppStyle.txtRobotoMedium12,
                             ),
                           ),
                         ],
@@ -108,113 +136,23 @@ class ListsetpickuppoItemWidget extends StatelessWidget {
                     Padding(
                       padding: getPadding(
                         left: 102,
-                        bottom: 16,
+                        top: 16,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: "‎60",
-                                  style: TextStyle(
-                                    color: ColorConstant.indigoA200,
-                                    fontSize: getFontSize(
-                                      15.269556045532227,
-                                    ),
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: " ",
-                                  style: TextStyle(
-                                    color: ColorConstant.indigoA200,
-                                    fontSize: getFontSize(
-                                      15.269556045532227,
-                                    ),
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: "USD\n",
-                                  style: TextStyle(
-                                    color: ColorConstant.indigoA200,
-                                    fontSize: getFontSize(
-                                      12,
-                                    ),
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                          Padding(
-                            padding: getPadding(
-                              top: 2,
-                            ),
-                            child: Text(
-                              "for hr",
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.left,
-                              style: AppStyle.txtRobotoMedium694,
-                            ),
-                          ),
+                          Image.asset(
+                            'assets/images/map_pin.png',
+                            width: 30,
+                            height: 30,
+                            fit: BoxFit.cover,
+                          )
                         ],
                       ),
                     ),
                   ],
-                ),
-                Padding(
-                  padding: getPadding(
-                    top: 12,
-                    bottom: 3,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CustomImageView(
-                        svgPath: ImageConstant.imgContrast,
-                        height: getSize(
-                          18,
-                        ),
-                        width: getSize(
-                          18,
-                        ),
-                      ),
-                      Padding(
-                        padding: getPadding(
-                          left: 3,
-                          top: 2,
-                        ),
-                        child: Text(
-                          "",
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: AppStyle.txtRobotoMedium12,
-                        ),
-                      ),
-                      Padding(
-                        padding: getPadding(
-                          left: 79,
-                          top: 1,
-                          bottom: 1,
-                        ),
-                        child: Text(
-                          "",
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: AppStyle.txtRobotoMedium12,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                )
               ],
             ),
           ),
