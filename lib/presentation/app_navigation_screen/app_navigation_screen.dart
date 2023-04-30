@@ -537,7 +537,7 @@ class AppNavigationScreen extends StatelessWidget {
   }
 
   onTapHomeOne(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.homeOneScreen);
+    Navigator.pushNamed(context, AppRoutes.homeScreen);
   }
 
   onTapMyCars(BuildContext context) {

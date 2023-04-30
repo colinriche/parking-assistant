@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Parking Assistance',
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.homeOneScreen,
+      initialRoute: AppRoutes.homeScreen,
       routes: AppRoutes.routes,
     );
   }
