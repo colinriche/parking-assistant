@@ -4,9 +4,11 @@ import 'package:parking_assistant/core/app_export.dart';
 import 'package:parking_assistant/widgets/custom_button.dart';
 import 'package:parking_assistant/widgets/custom_text_form_field.dart';
 
+import '../../core/utils/firebase/AuthService.dart';
+
 class SignUpScreen extends StatelessWidget {
   TextEditingController weburlController = TextEditingController();
-
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -213,13 +215,15 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   child: CustomButton(
                     text: "Sign UP",
-                    margin: getMargin(
-                      left: 6,
-                      top: 45,
-                      right: 5,
-                    ),
+                    margin: EdgeInsets.fromLTRB(6, 45, 5, 0),
                     variant: ButtonVariant.Outline,
                     fontStyle: ButtonFontStyle.MontserratSemiBold18Gray50,
+                    onPressed: () async {
+                      String? result = await _auth.signUpWithEmailAndPassword('email', 'password');
+                      if (result != null) {
+                        print(result);
+                      }
+                    },
                   ),
                 ),
               ),

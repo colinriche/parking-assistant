@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "769791834742",
+    "firebase_url": "https://passistant-15cea-default-rtdb.firebaseio.com",
+    "project_id": "passistant-15cea",
+    "storage_bucket": "passistant-15cea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769791834742:android:4534f41ad8f2ba8cbd7d57",
+        "android_client_info": {
+          "package_name": "app.parking.assistant.parking_assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769791834742-atqt00ai19opmvn69qbttnrff6146kff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXmniciyqVBvvkCYnIkMWOBYn5V4czXdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769791834742-atqt00ai19opmvn69qbttnrff6146kff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

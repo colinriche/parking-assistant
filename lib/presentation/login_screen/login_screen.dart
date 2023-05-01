@@ -3,8 +3,11 @@ import 'package:outline_gradient_button/outline_gradient_button.dart';
 import 'package:parking_assistant/core/app_export.dart';
 import 'package:parking_assistant/widgets/custom_button.dart';
 
+import '../../core/utils/firebase/AuthService.dart';
+
 class Login_Screen extends StatelessWidget {
   TextEditingController weburlController = TextEditingController();
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -182,16 +185,19 @@ class Login_Screen extends StatelessWidget {
                     ),
                   ),
                   child: CustomButton(
-                    text: "Login",
-                    margin: getMargin(
-                      left: 6,
-                      top: 45,
-                      right: 5,
-                    ),
-                    variant: ButtonVariant.Outline,
-                    fontStyle: ButtonFontStyle.MontserratSemiBold18Gray50,
-                  ),
+                      text: "Login",
+                      margin: EdgeInsets.fromLTRB(6, 45, 5, 0),
+                      variant: ButtonVariant.Outline,
+                      fontStyle: ButtonFontStyle.MontserratSemiBold18Gray50,
+                      onPressed: () async {
+                        String? result = await _auth.loginWithEmailAndPassword('email', 'password');
+                        if (result != null) {
+                          print(result);
+                        }
+                      },
+
                 ),
+              ),
               )
             ],
           ),

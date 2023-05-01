@@ -63,9 +63,12 @@ class WelcomePopUpDialog extends StatelessWidget {
           ),
           CustomButton(
             text: "OK",
-            margin: getMargin(
-              top: 20,
-            ),
+            margin: EdgeInsets.fromLTRB(6, 45, 5, 0),
+            variant: ButtonVariant.Outline,
+            fontStyle: ButtonFontStyle.MontserratSemiBold18Gray50,
+            onPressed: () async {
+
+            },
           ),
         ],
       ),

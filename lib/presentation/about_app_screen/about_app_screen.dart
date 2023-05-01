@@ -179,9 +179,12 @@ class AboutAppScreen extends StatelessWidget {
                               ),
                               CustomButton(
                                 text: "Get Started",
-                                margin: getMargin(
-                                  top: 8,
-                                ),
+                                margin: EdgeInsets.fromLTRB(6, 45, 5, 0),
+                                variant: ButtonVariant.Outline,
+                                fontStyle: ButtonFontStyle.MontserratSemiBold18Gray50,
+                                onPressed: () async {
+
+                                },
                               ),
                             ],
                           ),
