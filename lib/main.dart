@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Parking Assistance',
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.splashScreen,
+      initialRoute: AppRoutes.appNavigationScreen,
       routes: AppRoutes.routes,
     );
   }
