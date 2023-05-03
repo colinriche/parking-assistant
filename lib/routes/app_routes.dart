@@ -4,6 +4,7 @@ import 'package:parking_assistant/presentation/direction_screen/direction_screen
 import 'package:parking_assistant/presentation/login_screen/login_screen.dart';
 import 'package:parking_assistant/presentation/sign_up_screen/sign_up_screen.dart';
 import 'package:parking_assistant/presentation/home_one_screen/home_screen.dart';
+import 'package:parking_assistant/presentation/splash_screen/SplashScreen.dart';
 import 'package:parking_assistant/presentation/app_navigation_screen/app_navigation_screen.dart';
 
 class AppRoutes {
@@ -25,6 +26,7 @@ class AppRoutes {
   static const String mapScreen = '/map_screen';
 
   static const String homeScreen = '/home_screen';
+  static const String splashScreen = '/splash_screen';
 
   static const String appNavigationScreen = '/app_navigation_screen';
 
@@ -33,6 +35,7 @@ class AppRoutes {
     directionScreen: (context) => DirectionScreen(),
     signUpScreen: (context) => SignUpScreen(),
     loginScreen: (context) => Login_Screen(),
+    splashScreen: (context) => Splashscreen(),
     homeScreen: (context) => HomeScreen(),
     appNavigationScreen: (context) => AppNavigationScreen()
   };

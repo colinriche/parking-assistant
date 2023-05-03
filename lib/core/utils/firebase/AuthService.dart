@@ -1,23 +1,32 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-
+  final databaseReference = FirebaseDatabase.instance.reference();
   // Sign up with email and password
-  Future<String?> signUpWithEmailAndPassword(String email, String password) async {
+  Future<String?> signUp(String email, String password, String name) async {
     try {
-      UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
-      User? user = result.user;
-      return user?.uid;
-    } on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') {
-        return 'The password provided is too weak.';
-      } else if (e.code == 'email-already-in-use') {
-        return 'The account already exists for that email.';
-      }
-      return e.message;
+      // Create a new user account using Firebase Authentication
+      UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      // Get the user ID from Firebase Authentication
+      String uid = userCredential.user!.uid;
+
+      // Store the user data in the Firebase Realtime Database
+      await databaseReference.child('users').child(uid).set({
+        'name': name,
+        'email': email,
+      });
+
+      // Return the user ID
+      return uid;
     } catch (e) {
-      return e.toString();
+      print(e);
+      return null;
     }
   }
 
@@ -42,5 +51,13 @@ class AuthService {
   // Sign out
   Future<void> signOut() async {
     return _auth.signOut();
+  }
+
+  Future<bool> islogin() async {
+    if (_auth.currentUser != null) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

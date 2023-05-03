@@ -10,12 +10,12 @@
       "client_info": {
         "mobilesdk_app_id": "1:769791834742:android:4534f41ad8f2ba8cbd7d57",
         "android_client_info": {
-          "package_name": "app.parking.assistant.parking_assistant"
+          "package_name": "parking.assistant.parking_assistant"
         }
       },
       "oauth_client": [
         {
-          "client_id": "769791834742-atqt00ai19opmvn69qbttnrff6146kff.apps.googleusercontent.com",
+          "client_id": "769791834742-l7iqpscl3n8a3upt3bdujvfg16cf5mnn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

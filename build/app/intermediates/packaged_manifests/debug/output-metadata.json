@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "app.parking.assistant.parking_assistant",
+  "applicationId": "parking.assistant.parking_assistant",
   "variantName": "debug",
   "elements": [
     {
