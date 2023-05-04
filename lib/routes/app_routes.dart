@@ -18,7 +18,6 @@ class AppRoutes {
 
   static const String timerScreen = '/timer_screen';
 
-
   static const String myCarsScreen = '/my_cars_screen';
 
   static const String previousParkingScreen = '/previous_parking_screen';
@@ -26,6 +25,7 @@ class AppRoutes {
   static const String mapScreen = '/map_screen';
 
   static const String homeScreen = '/home_screen';
+
   static const String splashScreen = '/splash_screen';
 
   static const String appNavigationScreen = '/app_navigation_screen';

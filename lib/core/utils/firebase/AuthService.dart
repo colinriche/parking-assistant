@@ -48,6 +48,53 @@ class AuthService {
     }
   }
 
+    // Future<List<Map<String, dynamic>>> getParkingLocations() async {
+    //   DatabaseReference starCountRef =
+    //   FirebaseDatabase.instance.ref('parking_locations');
+    //   List<Map<String, dynamic>> parkingLocations = [];
+    //
+    //   starCountRef.onValue.listen((event) {
+    //     final data = event.snapshot.value;
+    //     if (data != null) {
+    //       Object? values = data;
+    //       print(values);
+    //     }
+    //   });
+    //
+    //   await Future.delayed(Duration(seconds: 1)); // Wait for the data to load
+    //   return parkingLocations;
+    // }
+
+  Future<List<Map<String, dynamic>>> getParkingLocations() async {
+    DatabaseReference starCountRef = FirebaseDatabase.instance.ref('parking_locations');
+    List<Map<String, dynamic>> parkingLocations = [];
+
+    try {
+      starCountRef.onValue.listen((event) {
+        DataSnapshot snapshot = event.snapshot;
+        Map<dynamic, dynamic>? values = snapshot.value as Map?;
+
+        if (values != null) {
+          values.forEach((key, item) {
+
+            if (item is Map<String, dynamic>) {
+              print(item);
+           //   parkingLocations.add(item);
+            }
+          });
+        }
+      });
+    } catch (error) {
+      print(error);
+    }
+
+    return parkingLocations;
+  }
+
+
+
+
+
   // Sign out
   Future<void> signOut() async {
     return _auth.signOut();

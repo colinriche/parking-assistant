@@ -1,13 +1,19 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 import 'package:parking_assistant/core/app_export.dart';
+import 'package:parking_assistant/presentation/login_screen/login_screen.dart';
 import 'package:parking_assistant/widgets/custom_button.dart';
 import 'package:parking_assistant/widgets/custom_text_form_field.dart';
 
  import '../../core/utils/firebase/AuthService.dart';
 
 class SignUpScreen extends StatelessWidget {
-  TextEditingController weburlController = TextEditingController();
+  TextEditingController _nameController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+  TextEditingController _repasswordController = TextEditingController();
+
    final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
@@ -62,6 +68,7 @@ class SignUpScreen extends StatelessWidget {
                   top: 47,
                 ),
                 child: TextField(
+                  controller: _nameController,
                   decoration: InputDecoration(
                     labelText: 'Enter Full Nane',
                     hintText: 'John',
@@ -77,6 +84,7 @@ class SignUpScreen extends StatelessWidget {
                   top: 21,
                 ),
                 child: TextField(
+                  controller: _emailController,
                   decoration: InputDecoration(
                     labelText: 'Enter your email',
                     hintText: 'example@gmail.com',
@@ -92,6 +100,7 @@ class SignUpScreen extends StatelessWidget {
                   top: 21,
                 ),
                 child: TextField(
+                  controller: _passwordController,
                   decoration: InputDecoration(
                     labelText: 'Enter Password',
                     border: OutlineInputBorder(),
@@ -107,6 +116,7 @@ class SignUpScreen extends StatelessWidget {
                   top: 21,
                 ),
                 child: TextField(
+                  controller: _repasswordController,
                   decoration: InputDecoration(
                     labelText: 'Confrim Password',
                     border: OutlineInputBorder(),
@@ -117,50 +127,6 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
 
-              Padding(
-                padding: getPadding(
-                  top: 24,
-                  right: 46,
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      height: getSize(
-                        24,
-                      ),
-                      width: getSize(
-                        24,
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          getHorizontalSize(
-                            4,
-                          ),
-                        ),
-                        border: Border.all(
-                          color: ColorConstant.blueGray100,
-                          width: getHorizontalSize(
-                            1,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: getPadding(
-                        left: 9,
-                        top: 4,
-                        bottom: 1,
-                      ),
-                      child: Text(
-                        "I agree with terms and conditions",
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.left,
-                        style: AppStyle.txtMontserratMedium14,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               Padding(
                 padding: getPadding(
                   left: 6,
@@ -219,36 +185,67 @@ class SignUpScreen extends StatelessWidget {
                     variant: ButtonVariant.Outline,
                     fontStyle: ButtonFontStyle.MontserratSemiBold18Gray50,
                     onPressed: () async {
-                      String email = 'example@gmail.com';
-                      String password = 'mypassword';
-                      String name = 'John';
+                      String email = _emailController.text;
+                      String password = _passwordController.text;
+                      String name = _nameController.text;
 
-                      String? result = await _auth.signUp(email, password, name);
+                      if (EmailValidator.validate(email)) {
+                        if(password.length > 6 && password != null){
+                          if(name != null){
+                            String? result = await _auth.signUp(email, password, name);
+                            if (result != null) {
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(builder: (context) => Login_Screen()));
 
-                      if (result != null) {
-                        print(result);
+                            }else{
+                              print(result);
+                            }
+
+                          }else{
+                            print('All fileds are required');
+                          }
+                        }else{
+                          print('password length must be gratter then 6');
+                        }
+
+                      } else {
+                        print('email is invalid');
+                        // email is invalid, show an error message
                       }
                     },
                   ),
                 ),
               ),
+
               Align(
-                alignment: Alignment.center,
-                child: Padding(
-                  padding: getPadding(
-                    top: 19,
-                    bottom: 5,
-                  ),
-                  child: Text(
-                    "have an account? LOGIN",
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.left,
-                    style: AppStyle.txtMontserratMedium16Bluegray30001.copyWith(
-                      decoration: TextDecoration.underline,
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: getPadding(
+                      top: 19,
+                      bottom: 5,
                     ),
-                  ),
-                ),
-              ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Have an account? "),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (context) => Login_Screen()),
+                            );
+                          },
+                          child: Text(
+                            'LOGIN',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+              )
             ],
           ),
         ),

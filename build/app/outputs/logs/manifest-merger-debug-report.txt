@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:6:5-36:19
+INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:6:5-37:19
 MERGED from [:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
@@ -72,11 +72,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chau
 	android:name
 		INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-37:12
-MERGED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-37:12
+ADDED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-38:12
+INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-38:12
+INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-38:12
+INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-38:12
+MERGED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-38:12
 MERGED from [:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_core] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
@@ -148,11 +148,11 @@ INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/and
 		INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml
-		ADDED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		ADDED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-38:12
 		INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml
-		ADDED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		ADDED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:1-38:12
 		INJECTED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:1:11-69

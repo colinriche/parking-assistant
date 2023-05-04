@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:easy_geofencing/easy_geofencing.dart';
+import 'package:easy_geofencing/enums/geofence_status.dart';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:parking_assistant/presentation/home_one_screen/home_screen.dart';
@@ -15,6 +17,37 @@ class Splashscreen extends StatefulWidget {
 
 class _SplashscreenState extends State<Splashscreen> {
   final AuthService _auth = AuthService();
+  StreamSubscription<GeofenceStatus>? geofenceStatusStream;
+
+  List<Map<String, dynamic>> parkingLocations = [
+    {
+      'id': '1',
+      'latitude': 33.675961,
+      'longitude': 73.002584,
+      'radius': 1000, // meters
+    },
+    {
+      'id': '2',
+      'latitude': 33.675069,
+      'longitude': 72.995203,
+      'radius': 500,
+    },
+    {
+      'id': '3',
+      'latitude': 33.671568,
+      'longitude': 72.997692,
+      'radius': 500,
+    },
+
+    {
+      'id': '4',
+      'latitude': 33.67138991,
+      'longitude': 72.99837828,
+      'radius': 500,
+    },
+    // add more parking locations here
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -43,9 +76,29 @@ class _SplashscreenState extends State<Splashscreen> {
         return;
       }
     }
+
     // Wait for 1 seconds before navigating to the home screen
     Timer(Duration(seconds: 1), () async {
+      parkingLocations.forEach((location) {
+        EasyGeofencing.startGeofenceService(
+            pointedLatitude: location['latitude'].toString(),
+            pointedLongitude: location['longitude'].toString(),
+            radiusMeter: '10',
+            eventPeriodInSeconds: 5);
 
+        if (geofenceStatusStream == null) {
+              geofenceStatusStream = EasyGeofencing.getGeofenceStream()!
+              .listen((GeofenceStatus status) {
+                print(status.toString());
+                setState(() {
+                  print("status"+status.toString());
+
+                });
+          });
+        }
+
+
+      });
       if (await _auth.islogin()){
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -55,6 +108,7 @@ class _SplashscreenState extends State<Splashscreen> {
           MaterialPageRoute(builder: (context) => Login_Screen()),
         );
       }
+
 
     });
   }

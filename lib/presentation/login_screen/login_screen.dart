@@ -1,13 +1,17 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 import 'package:parking_assistant/core/app_export.dart';
+import 'package:parking_assistant/presentation/sign_up_screen/sign_up_screen.dart';
 import 'package:parking_assistant/widgets/custom_button.dart';
 
 import '../../core/utils/firebase/AuthService.dart';
+import '../home_one_screen/home_screen.dart';
 
 
 class Login_Screen extends StatelessWidget {
-  TextEditingController weburlController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
    final AuthService _auth = AuthService();
 
   @override
@@ -63,6 +67,7 @@ class Login_Screen extends StatelessWidget {
                   top: 47,
                 ),
                 child: TextField(
+                  controller: _emailController,
                   decoration: InputDecoration(
                     labelText: 'Enter your email',
                     hintText: 'example@gmail.com',
@@ -78,6 +83,7 @@ class Login_Screen extends StatelessWidget {
                   top: 21,
                 ),
                 child: TextField(
+                  controller: _passwordController,
                   decoration: InputDecoration(
                     labelText: 'Enter Password',
                     border: OutlineInputBorder(),
@@ -88,51 +94,6 @@ class Login_Screen extends StatelessWidget {
                 ),
               ),
 
-
-              Padding(
-                padding: getPadding(
-                  top: 24,
-                  right: 46,
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      height: getSize(
-                        24,
-                      ),
-                      width: getSize(
-                        24,
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          getHorizontalSize(
-                            4,
-                          ),
-                        ),
-                        border: Border.all(
-                          color: ColorConstant.blueGray100,
-                          width: getHorizontalSize(
-                            1,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: getPadding(
-                        left: 9,
-                        top: 4,
-                        bottom: 1,
-                      ),
-                      child: Text(
-                        "I agree with terms and conditions",
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.left,
-                        style: AppStyle.txtMontserratMedium14,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               Padding(
                 padding: getPadding(
                   left: 6,
@@ -191,14 +152,64 @@ class Login_Screen extends StatelessWidget {
                       variant: ButtonVariant.Outline,
                       fontStyle: ButtonFontStyle.MontserratSemiBold18Gray50,
                       onPressed: () async {
-                        String? result = await _auth.loginWithEmailAndPassword('email', 'password');
-                        if (result != null) {
-                          print(result);
+                        final email = _emailController.text;
+                        final password = _passwordController.text;
+
+                        if (EmailValidator.validate(email)) {
+                          if(password.length > 6 && password != null ){
+                            String? result = await _auth.loginWithEmailAndPassword(email, password);
+                            if (result != null) {
+                              if(result != 'No user found for that email.' && result != 'Wrong password provided for that user.' && email != null){
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                              }else{
+                                print('is_error ---------> '+result);
+                              }
+
+                            }
+                          }else{
+                            print('password length must be gratter then 6');
+                          }
+
+                        } else {
+                          print('email is invalid');
+                          // email is invalid, show an error message
                         }
+
                       },
 
                 ),
               ),
+              ),
+
+              Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: getPadding(
+                    top: 19,
+                    bottom: 5,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Don't have an account? "),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) => SignUpScreen()),
+                          );
+                        },
+                        child: Text(
+                          'REGISTER',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               )
             ],
           ),
