@@ -1,3 +1,6 @@
+import 'package:firebase_database/firebase_database.dart';
+
+import '../../core/utils/firebase/AuthService.dart';
 import '../home_one_screen/widgets/listdirectionsc_item_widget.dart';
 import '../home_one_screen/widgets/listsetpickuppo_item_widget.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +12,61 @@ import 'package:parking_assistant/widgets/app_bar/appbar_title.dart';
 import 'package:parking_assistant/widgets/app_bar/custom_app_bar.dart';
 import 'package:parking_assistant/widgets/custom_icon_button.dart';
 
-class HomeScreen extends StatelessWidget {
+
+class HomeScreen extends StatefulWidget {
+  HomeScreen({Key? key}) : super(key: key);
+  @override
+  _HomeScreen_State createState() => _HomeScreen_State();
+}
+
+class _HomeScreen_State extends State<HomeScreen> {
+
+  final AuthService _auth = AuthService();
+  List<Map<String, dynamic>> parking = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _FetchFromDatabase();
+  }
+
+  void _FetchFromDatabase() async {
+    try {
+      DatabaseReference parkingRef =
+      FirebaseDatabase.instance.reference().child('parking_locations');
+
+      // Retrieve parking locations from Firebase Realtime Database
+      parkingRef.onValue.listen((event) async {
+        Map<dynamic, dynamic> parkingsMap = event.snapshot.value as Map<dynamic, dynamic>;
+        if (parkingsMap != null) {
+          List<Map<String, dynamic>> tempParking = [];
+          parkingsMap.forEach((key, value) {
+            Map<String, dynamic> parking = Map.from(value);
+
+
+              print('name --->'+parking['name'].toString());
+              print('address --->'+parking['address'].toString());
+
+            tempParking.add({
+              'name': parking['name'].toString(),
+              'address': parking['address'].toString(),
+              'latitude': parking['latitude'].toString(),
+              'longitude': parking['longitude'].toString(),
+              // add other properties as needed
+            });
+
+          });
+
+          setState(() {
+            parking = tempParking;
+          });
+        }
+      });
+    } catch (error) {
+      print(error);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -768,11 +825,16 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                       );
                                     },
-                                    itemCount: 3,
+                                    itemCount: parking.length,
                                     itemBuilder: (context, index) {
-                                      return ListsetpickuppoItemWidget();
+                                      return ListsetpickuppoItemWidget(
+                                        title: parking[index]['name'],
+                                        location: parking[index]['address'],
+                                        latitude: parking[index]['latitude'],
+                                        longitude: parking[index]['longitude'],
+                                      );
                                     },
-                                  ),
+                                  )
                                 ),
                               ],
                             ),

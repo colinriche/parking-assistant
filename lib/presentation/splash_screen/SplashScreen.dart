@@ -34,13 +34,11 @@ class _SplashscreenState extends State<Splashscreen> {
       FirebaseDatabase.instance.reference().child('parking_locations');
 
       // Retrieve geofence locations from Firebase Realtime Database
-      geofenceRef.onValue.listen((event) {
+      geofenceRef.onValue.listen((event) async {
         Map<dynamic, dynamic> geofencesMap = event.snapshot.value as Map<dynamic, dynamic>;
         if (geofencesMap != null) {
           geofencesMap.forEach((key, value) {
             Map<String, dynamic> geofence = Map.from(value);
-
-            print('latitude --->  '+geofence['latitude'].toString());
 
             EasyGeofencing.startGeofenceService(
                 pointedLatitude: geofence['latitude'].toString(),
@@ -48,6 +46,17 @@ class _SplashscreenState extends State<Splashscreen> {
                 radiusMeter: geofence['notify_radius'].toString(),
                 eventPeriodInSeconds: 5);
           });
+
+          if (await _auth.islogin()){
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                );
+              }else{
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Login_Screen()),
+                );
+              }
+
 
         }
       });

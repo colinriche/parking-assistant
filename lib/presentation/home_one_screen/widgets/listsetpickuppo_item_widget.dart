@@ -3,8 +3,20 @@ import 'package:outline_gradient_button/outline_gradient_button.dart';
 import 'package:parking_assistant/core/app_export.dart';
 
 // ignore: must_be_immutable
+
+
 class ListsetpickuppoItemWidget extends StatelessWidget {
-  ListsetpickuppoItemWidget();
+  final String title;
+  final String location;
+  final String latitude;
+  final String longitude;
+
+  ListsetpickuppoItemWidget({
+    required this.title,
+    required this.location,
+    required this.latitude,
+    required this.longitude,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +114,7 @@ class ListsetpickuppoItemWidget extends StatelessWidget {
                         children: [
 
                           Text(
-                            "Parking text",
+                            location,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtRobotoMedium12,
@@ -112,7 +124,7 @@ class ListsetpickuppoItemWidget extends StatelessWidget {
                               top: 4,
                             ),
                             child: Text(
-                              "Parking text 2",
+                              title,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtRobotoMedium18,
@@ -124,7 +136,7 @@ class ListsetpickuppoItemWidget extends StatelessWidget {
                               top: 4,
                             ),
                             child:  Text(
-                              "32.87909,72.5467565",
+                              latitude+","+longitude,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtRobotoMedium12,
