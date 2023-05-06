@@ -17,9 +17,21 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
   Set<Marker> _markers = {};
   Set<Polyline> _polylines = {};
 
+  LatLng _fixedLocation = LatLng(33.671568, 72.997692);
+
   @override
   void initState() {
     super.initState();
+    _polylines.add(
+      Polyline(
+        polylineId: PolylineId("route"),
+        visible: true,
+        points: [_fixedLocation],
+        color: Colors.blue,
+        width: 3,
+      ),
+    );
+
     _location.onLocationChanged.listen((LocationData currentLocation) {
       setState(() {
         final newLatLng = LatLng(currentLocation.latitude!, currentLocation.longitude!);
@@ -28,7 +40,7 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
         _markers.add(
           Marker(
             markerId: MarkerId("current_position"),
-            position: newLatLng,
+            position: _fixedLocation,
             icon: BitmapDescriptor.defaultMarker,
           ),
         );
@@ -39,7 +51,7 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
             Polyline(
               polylineId: PolylineId("route"),
               visible: true,
-              points: [_lastPosition!, newLatLng],
+              points: [_fixedLocation, newLatLng],
               color: Colors.blue,
               width: 3,
             ),
@@ -66,6 +78,7 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
           initialCameraPosition: CameraPosition(target: LatLng(0, 0)),
           myLocationEnabled: true,
           polylines: _polylines,
+          markers: _markers,
         ),
       ),
       actions: [

@@ -37,42 +37,9 @@ class _HomeScreen_State extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _FetchFromDatabase();
     _FetchDashboardData();
-   // _Update_DashboardData();
-  }
 
-  void _FetchFromDatabase() async {
-    try {
-      DatabaseReference parkingRef =
-      FirebaseDatabase.instance.reference().child('parking_locations');
-
-      // Retrieve parking locations from Firebase Realtime Database
-      parkingRef.onValue.listen((event) async {
-        Map<dynamic, dynamic> parkingsMap = event.snapshot.value as Map<dynamic, dynamic>;
-        if (parkingsMap != null) {
-          List<Map<String, dynamic>> tempParking = [];
-          parkingsMap.forEach((key, value) {
-            Map<String, dynamic> parking = Map.from(value);
-
-            tempParking.add({
-              'name': parking['name'].toString(),
-              'address': parking['address'].toString(),
-              'latitude': parking['latitude'].toString(),
-              'longitude': parking['longitude'].toString(),
-              // add other properties as needed
-            });
-
-          });
-
-          setState(() {
-            parking = tempParking;
-          });
-        }
-      });
-    } catch (error) {
-      print(error);
-    }
+    _Update_DashboardData();
   }
 
   void _FetchDashboardData() async {
@@ -90,7 +57,7 @@ class _HomeScreen_State extends State<HomeScreen> {
           if (snapshot.value != null) {
             Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
 
-             name = data['name'];
+            name = data['name'];
             bool isVisitedParking = data['isVisited_Parking'];
             is_visited = isVisitedParking;
             if(is_visited){
@@ -115,6 +82,34 @@ class _HomeScreen_State extends State<HomeScreen> {
           print('Error: $error');
         });
 
+        DatabaseReference parkingRef =
+        database.reference().child('parking_locations');
+
+        // Retrieve parking locations from Firebase Realtime Database
+        parkingRef.onValue.listen((event) async {
+          Map<dynamic, dynamic> parkingsMap = event.snapshot.value as Map<dynamic, dynamic>;
+          if (parkingsMap != null) {
+            List<Map<String, dynamic>> tempParking = [];
+            parkingsMap.forEach((key, value) {
+              Map<String, dynamic> parking = Map.from(value);
+
+              tempParking.add({
+                'name': parking['name'].toString(),
+                'address': parking['address'].toString(),
+                'latitude': parking['latitude'].toString(),
+                'longitude': parking['longitude'].toString(),
+                // add other properties as needed
+              });
+
+            });
+
+            setState(() {
+              parking = tempParking;
+              _FetchDashboardData();
+            });
+          }
+        });
+
       } catch (error) {
         print(error);
       }
@@ -125,7 +120,6 @@ class _HomeScreen_State extends State<HomeScreen> {
   }
 
   void _Update_DashboardData() async {
-
     User? user = auth.currentUser;
     if (user != null) {
       String uid = user.uid;
@@ -137,7 +131,7 @@ class _HomeScreen_State extends State<HomeScreen> {
         reference.update({
           'address': '123 Main St',
           'latitude': 32.7749,
-          'isVisited_Parking': true,
+          'isVisited_Parking': false,
           'longitude': 72.4194,
         }).then((_) {
           print('Data updated successfully.');
