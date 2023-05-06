@@ -46,6 +46,8 @@ dependencies:
   location: ^4.4.0
   easy_geofencing: ^0.2.0
   email_validator: ^2.1.17
+  google_maps_flutter: ^2.2.6
+  flutter_map: ^4.0.0
 
 dev_dependencies:
   flutter_test:

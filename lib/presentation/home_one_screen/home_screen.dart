@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../core/utils/firebase/AuthService.dart';
+import '../../core/utils/firebase/MapDialog.dart';
 import '../home_one_screen/widgets/listdirectionsc_item_widget.dart';
 import '../home_one_screen/widgets/listsetpickuppo_item_widget.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +20,7 @@ class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
   @override
   _HomeScreen_State createState() => _HomeScreen_State();
+
 }
 
 class _HomeScreen_State extends State<HomeScreen> {
@@ -25,12 +28,11 @@ class _HomeScreen_State extends State<HomeScreen> {
   final AuthService _auth = AuthService();
   List<Map<String, dynamic>> parking = [];
   late String name = '';
-
   late String _address = '';
   late double _latitude = 0.0;
   late double _longitude = 0.0;
-
   late bool is_visited = false;
+
 
   @override
   void initState() {
@@ -559,61 +561,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                           TextAlign.left,
                                                           style: AppStyle
                                                               .txtMontserratMedium14Bluegray80001,
-                                                        ),
-                                                        Padding(
-                                                          padding: getPadding(
-                                                            top: 14,
-                                                          ),
-                                                          child: Row(
-                                                            children: [
-                                                              Text(
-                                                                "A03 (Base 2)",
-                                                                overflow:
-                                                                TextOverflow
-                                                                    .ellipsis,
-                                                                textAlign:
-                                                                TextAlign
-                                                                    .left,
-                                                                style: AppStyle
-                                                                    .txtMontserratMedium14Bluegray30003,
-                                                              ),
-                                                              CustomImageView(
-                                                                svgPath:
-                                                                ImageConstant
-                                                                    .imgPointer1,
-                                                                height: getSize(
-                                                                  16,
-                                                                ),
-                                                                width: getSize(
-                                                                  16,
-                                                                ),
-                                                                margin:
-                                                                getMargin(
-                                                                  left: 16,
-                                                                  bottom: 2,
-                                                                ),
-                                                              ),
-                                                              Padding(
-                                                                padding:
-                                                                getPadding(
-                                                                  left: 5,
-                                                                  bottom: 2,
-                                                                ),
-                                                                child: Text(
-                                                                  "3.3 km",
-                                                                  overflow:
-                                                                  TextOverflow
-                                                                      .ellipsis,
-                                                                  textAlign:
-                                                                  TextAlign
-                                                                      .left,
-                                                                  style: AppStyle
-                                                                      .txtRobotoMedium12,
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
+                                                        )
                                                       ],
                                                     ),
                                                     CustomIconButton(
@@ -643,7 +591,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                       .spaceBetween,
                                                   children: [
                                                     Text(
-                                                      "10:00 AM",
+                                                      ''+_latitude.toString(),
                                                       overflow:
                                                       TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
@@ -665,7 +613,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                       ),
                                                     ),
                                                     Text(
-                                                      "11:00 PM",
+                                                      ''+_longitude.toString(),
                                                       overflow:
                                                       TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
@@ -1026,11 +974,21 @@ class _HomeScreen_State extends State<HomeScreen> {
                                     },
                                     itemCount: parking.length,
                                     itemBuilder: (context, index) {
-                                      return ListsetpickuppoItemWidget(
-                                        title: parking[index]['name'],
-                                        location: parking[index]['address'],
-                                        latitude: parking[index]['latitude'],
-                                        longitude: parking[index]['longitude'],
+                                      return GestureDetector(
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return MapAlertDialog();
+                                            },
+                                          );
+                                        },
+                                        child: ListsetpickuppoItemWidget(
+                                          title: parking[index]['name'],
+                                          location: parking[index]['address'],
+                                          latitude: parking[index]['latitude'],
+                                          longitude: parking[index]['longitude'],
+                                        ),
                                       );
                                     },
                                   )
