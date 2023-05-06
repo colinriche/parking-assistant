@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 import '../../core/utils/firebase/AuthService.dart';
@@ -20,14 +21,22 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreen_State extends State<HomeScreen> {
-
+  FirebaseAuth auth = FirebaseAuth.instance;
   final AuthService _auth = AuthService();
   List<Map<String, dynamic>> parking = [];
+  late String name = '';
+
+  late String _address = '';
+  late double _latitude = 0.0;
+  late double _longitude = 0.0;
+
+  late bool is_visited = false;
 
   @override
   void initState() {
     super.initState();
     _FetchFromDatabase();
+    _FetchDashboardData();
   }
 
   void _FetchFromDatabase() async {
@@ -42,10 +51,6 @@ class _HomeScreen_State extends State<HomeScreen> {
           List<Map<String, dynamic>> tempParking = [];
           parkingsMap.forEach((key, value) {
             Map<String, dynamic> parking = Map.from(value);
-
-
-              print('name --->'+parking['name'].toString());
-              print('address --->'+parking['address'].toString());
 
             tempParking.add({
               'name': parking['name'].toString(),
@@ -65,6 +70,61 @@ class _HomeScreen_State extends State<HomeScreen> {
     } catch (error) {
       print(error);
     }
+  }
+
+  void _FetchDashboardData() async {
+
+    User? user = auth.currentUser;
+    if (user != null) {
+      String uid = user.uid;
+      print('Current user UID: $uid');
+      try {
+        FirebaseDatabase database = FirebaseDatabase.instance;
+        DatabaseReference reference = database.reference().child('users').child(uid);
+
+        reference.onValue.listen((event) {
+          DataSnapshot snapshot = event.snapshot;
+          if (snapshot.value != null) {
+            Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
+
+             name = data['name'];
+            String email = data['email'];
+
+            bool isVisitedParking = data['isVisited_Parking'];
+
+            is_visited = isVisitedParking;
+
+            if(is_visited){
+              String address = data['address'];
+              double latitude = data['latitude'].toDouble();
+              double longitude = data['longitude'].toDouble();
+              _address = address;
+              _latitude = latitude;
+              _longitude = longitude;
+
+              is_visited = true;
+
+            }else{
+              is_visited = isVisitedParking;
+            }
+
+
+          } else {
+            // Handle the case where the snapshot value is null or doesn't exist
+            print('No data available');
+          }
+        }, onError: (error) {
+          // Handle any errors that may occur while listening for changes
+          print('Error: $error');
+        });
+
+      } catch (error) {
+        print(error);
+      }
+    } else {
+      print('User is not authenticated.');
+    }
+
   }
 
   @override
@@ -153,7 +213,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                           bottom: 43,
                         ),
                         child: Text(
-                          "Hi, John!",
+                          "Hi, "+name+"!",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtMontserratBold22,
@@ -177,7 +237,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                         left: 16,
                       ),
                       child: Text(
-                        "Reserved parking spaces",
+                        "Last Visited Space",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtSairaBold18,
@@ -194,7 +254,8 @@ class _HomeScreen_State extends State<HomeScreen> {
                         left: 7,
                         top: 2,
                       ),
-                      child: Stack(
+                      child:
+                      Stack(
                         alignment: Alignment.bottomCenter,
                         children: [
                           Align(
@@ -366,12 +427,14 @@ class _HomeScreen_State extends State<HomeScreen> {
                             alignment: Alignment.topCenter,
                             child: Container(
                               height: getVerticalSize(
-                                207,
+                                250,
                               ),
                               width: getHorizontalSize(
                                 362,
                               ),
-                              child: Stack(
+                              // data area
+                              child: is_visited ?
+                               Stack(
                                 alignment: Alignment.bottomLeft,
                                 children: [
                                   Align(
@@ -435,14 +498,14 @@ class _HomeScreen_State extends State<HomeScreen> {
                                             bottom: 11,
                                           ),
                                           decoration:
-                                              AppDecoration.outline.copyWith(
+                                          AppDecoration.outline.copyWith(
                                             borderRadius: BorderRadiusStyle
                                                 .roundedBorder16,
                                           ),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             mainAxisAlignment:
-                                                MainAxisAlignment.end,
+                                            MainAxisAlignment.end,
                                             children: [
                                               Padding(
                                                 padding: getPadding(
@@ -452,47 +515,47 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                 ),
                                                 child: Row(
                                                   mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                                   children: [
                                                     Column(
                                                       crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
+                                                      CrossAxisAlignment
+                                                          .start,
                                                       mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
+                                                      MainAxisAlignment
+                                                          .start,
                                                       children: [
                                                         Text(
-                                                          "NCP (National Car Parks)",
+                                                          _address,
                                                           overflow: TextOverflow
                                                               .ellipsis,
                                                           textAlign:
-                                                              TextAlign.left,
+                                                          TextAlign.left,
                                                           style: AppStyle
                                                               .txtMontserratMedium14Bluegray80001,
                                                         ),
                                                         Padding(
                                                           padding: getPadding(
-                                                            top: 4,
+                                                            top: 14,
                                                           ),
                                                           child: Row(
                                                             children: [
                                                               Text(
                                                                 "A03 (Base 2)",
                                                                 overflow:
-                                                                    TextOverflow
-                                                                        .ellipsis,
+                                                                TextOverflow
+                                                                    .ellipsis,
                                                                 textAlign:
-                                                                    TextAlign
-                                                                        .left,
+                                                                TextAlign
+                                                                    .left,
                                                                 style: AppStyle
                                                                     .txtMontserratMedium14Bluegray30003,
                                                               ),
                                                               CustomImageView(
                                                                 svgPath:
-                                                                    ImageConstant
-                                                                        .imgPointer1,
+                                                                ImageConstant
+                                                                    .imgPointer1,
                                                                 height: getSize(
                                                                   16,
                                                                 ),
@@ -500,25 +563,25 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                                   16,
                                                                 ),
                                                                 margin:
-                                                                    getMargin(
+                                                                getMargin(
                                                                   left: 16,
                                                                   bottom: 2,
                                                                 ),
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    getPadding(
+                                                                getPadding(
                                                                   left: 5,
                                                                   bottom: 2,
                                                                 ),
                                                                 child: Text(
                                                                   "3.3 km",
                                                                   overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
+                                                                  TextOverflow
+                                                                      .ellipsis,
                                                                   textAlign:
-                                                                      TextAlign
-                                                                          .left,
+                                                                  TextAlign
+                                                                      .left,
                                                                   style: AppStyle
                                                                       .txtRobotoMedium12,
                                                                 ),
@@ -551,13 +614,13 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                 ),
                                                 child: Row(
                                                   mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                                   children: [
                                                     Text(
                                                       "10:00 AM",
                                                       overflow:
-                                                          TextOverflow.ellipsis,
+                                                      TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
                                                       style: AppStyle
                                                           .txtMontserratMedium18,
@@ -579,7 +642,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                     Text(
                                                       "11:00 PM",
                                                       overflow:
-                                                          TextOverflow.ellipsis,
+                                                      TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
                                                       style: AppStyle
                                                           .txtMontserratMedium18,
@@ -589,18 +652,19 @@ class _HomeScreen_State extends State<HomeScreen> {
                                               ),
                                               Padding(
                                                 padding: getPadding(
-                                                  top: 8,
+                                                  top: 18,
                                                   right: 4,
+                                                  bottom: 18,
                                                 ),
                                                 child: Row(
                                                   mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                                   children: [
                                                     Text(
                                                       "30 Apr, 2023",
                                                       overflow:
-                                                          TextOverflow.ellipsis,
+                                                      TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
                                                       style: AppStyle
                                                           .txtMontserratMedium14Bluegray30003,
@@ -608,7 +672,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                     Text(
                                                       "30 Apr, 2023",
                                                       overflow:
-                                                          TextOverflow.ellipsis,
+                                                      TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
                                                       style: AppStyle
                                                           .txtMontserratMedium14Bluegray30003,
@@ -616,86 +680,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                   ],
                                                 ),
                                               ),
-                                              Container(
-                                                height: getVerticalSize(
-                                                  44,
-                                                ),
-                                                width: getHorizontalSize(
-                                                  319,
-                                                ),
-                                                margin: getMargin(
-                                                  top: 15,
-                                                ),
-                                                child: Stack(
-                                                  alignment:
-                                                      Alignment.bottomLeft,
-                                                  children: [
-                                                    Align(
-                                                      alignment:
-                                                          Alignment.bottomLeft,
-                                                      child: Row(
-                                                        children: [
-                                                          CustomIconButton(
-                                                            height: 32,
-                                                            width: 32,
-                                                            variant:
-                                                                IconButtonVariant
-                                                                    .GradientGreenA200Teal500,
-                                                            shape: IconButtonShape
-                                                                .CircleBorder16,
-                                                            child:
-                                                                CustomImageView(
-                                                              svgPath:
-                                                                  ImageConstant
-                                                                      .imgComputer,
-                                                            ),
-                                                          ),
-                                                          CustomIconButton(
-                                                            height: 32,
-                                                            width: 32,
-                                                            margin: getMargin(
-                                                              left: 6,
-                                                            ),
-                                                            variant:
-                                                                IconButtonVariant
-                                                                    .GradientBlue300Blue700,
-                                                            shape: IconButtonShape
-                                                                .CircleBorder16,
-                                                            child:
-                                                                CustomImageView(
-                                                              svgPath:
-                                                                  ImageConstant
-                                                                      .imgSignal,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Align(
-                                                      alignment:
-                                                          Alignment.topCenter,
-                                                      child: SizedBox(
-                                                        width:
-                                                            getHorizontalSize(
-                                                          319,
-                                                        ),
-                                                        child: Divider(
-                                                          height:
-                                                              getVerticalSize(
-                                                            1,
-                                                          ),
-                                                          thickness:
-                                                              getVerticalSize(
-                                                            1,
-                                                          ),
-                                                          color: ColorConstant
-                                                              .gray100,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
+
                                             ],
                                           ),
                                         ),
@@ -775,12 +760,201 @@ class _HomeScreen_State extends State<HomeScreen> {
                                     ),
                                   ),
                                 ],
-                              ),
+                              ) : Stack(
+                                alignment: Alignment.bottomLeft,
+                                children: [
+                                  Align(
+                                    alignment: Alignment.center,
+                                    child: Padding(
+                                      padding: getPadding(
+                                        left: 10,
+                                        right: 9,
+                                      ),
+                                      child: OutlineGradientButton(
+                                        padding: EdgeInsets.only(
+                                          left: getHorizontalSize(
+                                            1,
+                                          ),
+                                          top: getVerticalSize(
+                                            1,
+                                          ),
+                                          right: getHorizontalSize(
+                                            1,
+                                          ),
+                                          bottom: getVerticalSize(
+                                            1,
+                                          ),
+                                        ),
+                                        strokeWidth: getHorizontalSize(
+                                          1,
+                                        ),
+                                        gradient: LinearGradient(
+                                          begin: Alignment(
+                                            0,
+                                            0,
+                                          ),
+                                          end: Alignment(
+                                            1,
+                                            1,
+                                          ),
+                                          colors: [
+                                            ColorConstant.whiteA700,
+                                            ColorConstant.whiteA70000,
+                                          ],
+                                        ),
+                                        corners: Corners(
+                                          topLeft: Radius.circular(
+                                            16,
+                                          ),
+                                          topRight: Radius.circular(
+                                            16,
+                                          ),
+                                          bottomLeft: Radius.circular(
+                                            16,
+                                          ),
+                                          bottomRight: Radius.circular(
+                                            16,
+                                          ),
+                                        ),
+                                        child: Container(
+                                          padding: getPadding(
+                                            left: 12,
+                                            top: 11,
+                                            right: 12,
+                                            bottom: 11,
+                                          ),
+                                          decoration:
+                                          AppDecoration.outline.copyWith(
+                                            borderRadius: BorderRadiusStyle
+                                                .roundedBorder16,
+                                          ),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                            children: [
+                                              Padding(
+                                                padding: getPadding(
+                                                  left: 2,
+                                                  top: 70,
+                                                  bottom:70,
+                                                  right: 4,
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .center,
+                                                  children: [
+                                                    Column(
+                                                      crossAxisAlignment:
+                                                      CrossAxisAlignment
+                                                          .center,
+                                                      mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .center,
+                                                      children: [
+                                                        Text(
+                                                          "No Record Found.",
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                          textAlign:
+                                                          TextAlign.center,
+                                                          style: AppStyle
+                                                              .txtMontserratMedium14Bluegray80001,
+                                                        )
+                                                      ],
+                                                    )
+                                                  ],
+                                                ),
+                                              )
+
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: Container(
+                                      height: getSize(
+                                        20,
+                                      ),
+                                      width: getSize(
+                                        20,
+                                      ),
+                                      margin: getMargin(
+                                        bottom: 45,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(
+                                          getHorizontalSize(
+                                            10,
+                                          ),
+                                        ),
+                                        gradient: LinearGradient(
+                                          begin: Alignment(
+                                            1,
+                                            0.5,
+                                          ),
+                                          end: Alignment(
+                                            0,
+                                            0.5,
+                                          ),
+                                          colors: [
+                                            ColorConstant.gray10001,
+                                            ColorConstant.gray10002,
+                                            ColorConstant.gray50,
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Container(
+                                      height: getSize(
+                                        20,
+                                      ),
+                                      width: getSize(
+                                        20,
+                                      ),
+                                      margin: getMargin(
+                                        bottom: 45,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(
+                                          getHorizontalSize(
+                                            10,
+                                          ),
+                                        ),
+                                        gradient: LinearGradient(
+                                          begin: Alignment(
+                                            1,
+                                            0.5,
+                                          ),
+                                          end: Alignment(
+                                            0,
+                                            0.5,
+                                          ),
+                                          colors: [
+                                            ColorConstant.gray10003,
+                                            ColorConstant.gray50,
+                                            ColorConstant.gray10001,
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )
                             ),
                           ),
                         ],
                       ),
                     ),
+
+                    // bottom area
                     Container(
                       height: getVerticalSize(
                         220,

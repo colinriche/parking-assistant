@@ -19,6 +19,10 @@ class AuthService {
       await databaseReference.child('users').child(uid).set({
         'name': name,
         'email': email,
+        'isVisited_Parking': false,
+        'address': '',
+        'latitude': 0.00,
+        'longitude': 0.00,
       });
 
       // Return the user ID

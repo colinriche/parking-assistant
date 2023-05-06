@@ -48,6 +48,7 @@ class _SplashscreenState extends State<Splashscreen> {
           });
 
           if (await _auth.islogin()){
+            // _auth.signOut();
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (context) => HomeScreen()),
                 );
