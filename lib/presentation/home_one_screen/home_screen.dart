@@ -37,6 +37,7 @@ class _HomeScreen_State extends State<HomeScreen> {
     super.initState();
     _FetchFromDatabase();
     _FetchDashboardData();
+   // _Update_DashboardData();
   }
 
   void _FetchFromDatabase() async {
@@ -88,12 +89,8 @@ class _HomeScreen_State extends State<HomeScreen> {
             Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
 
              name = data['name'];
-            String email = data['email'];
-
             bool isVisitedParking = data['isVisited_Parking'];
-
             is_visited = isVisitedParking;
-
             if(is_visited){
               String address = data['address'];
               double latitude = data['latitude'].toDouble();
@@ -101,13 +98,11 @@ class _HomeScreen_State extends State<HomeScreen> {
               _address = address;
               _latitude = latitude;
               _longitude = longitude;
-
               is_visited = true;
 
             }else{
               is_visited = isVisitedParking;
             }
-
 
           } else {
             // Handle the case where the snapshot value is null or doesn't exist
@@ -116,6 +111,36 @@ class _HomeScreen_State extends State<HomeScreen> {
         }, onError: (error) {
           // Handle any errors that may occur while listening for changes
           print('Error: $error');
+        });
+
+      } catch (error) {
+        print(error);
+      }
+    } else {
+      print('User is not authenticated.');
+    }
+
+  }
+
+  void _Update_DashboardData() async {
+
+    User? user = auth.currentUser;
+    if (user != null) {
+      String uid = user.uid;
+      print('Current user UID: $uid');
+      try {
+        FirebaseDatabase database = FirebaseDatabase.instance;
+        DatabaseReference reference = database.reference().child('users').child(uid);
+
+        reference.update({
+          'address': '123 Main St',
+          'latitude': 32.7749,
+          'isVisited_Parking': true,
+          'longitude': 72.4194,
+        }).then((_) {
+          print('Data updated successfully.');
+        }).catchError((error) {
+          print('Data could not be updated: $error');
         });
 
       } catch (error) {
