@@ -74,12 +74,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "easy_geofencing",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/easy_geofencing-0.2.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "email_validator",
       "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/email_validator-2.1.17",
       "packageUri": "lib/",
@@ -340,24 +334,6 @@
     {
       "name": "lists",
       "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/lists-1.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "location",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/location-4.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "location_platform_interface",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/location_platform_interface-2.3.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "location_web",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/location_web-3.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -686,7 +662,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-05-07T09:07:00.603041Z",
+  "generated": "2023-05-07T11:13:16.380396Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
