@@ -109,10 +109,6 @@ class _HomeScreen_State extends State<HomeScreen> {
     super.dispose();
   }
 
-  Widget _buildContentView() {
-    return _buildGeofenceMonitor();
-  }
-
   Widget _buildGeofenceMonitor() {
     return StreamBuilder<Geofence>(
       stream: _geofenceStreamController.stream,
