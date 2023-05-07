@@ -48,6 +48,7 @@ dependencies:
   email_validator: ^2.1.17
   google_maps_flutter: ^2.2.6
   flutter_map: ^4.0.0
+  geofence_service: ^3.5.0
 
 dev_dependencies:
   flutter_test:
