@@ -40,26 +40,38 @@ class _HomeScreen_State extends State<HomeScreen> {
       allowMockLocations: false,
       printDevLog: false,
       geofenceRadiusSortType: GeofenceRadiusSortType.DESC);
+
   final _geofenceList = <Geofence>[
     Geofence(
       id: 'place_1',
-      latitude: 33.6183207,
-      longitude: 72.9550881,
+      latitude: 52.0404497,
+      longitude: -0.7493338,
       radius: [
-        GeofenceRadius(id: 'radius_25m', length: 15),
-        GeofenceRadius(id: 'radius_100m', length: 100),
-        GeofenceRadius(id: 'radius_250m', length: 250),
-        GeofenceRadius(id: 'radius_200m', length: 200),
-      ],
+        GeofenceRadius(id: 'radius_25m', length: 15)]
     ),
     Geofence(
       id: 'place_2',
-      latitude: 33.6175367,
-      longitude: 72.9548943,
+      latitude: 52.0408197,
+      longitude: -0.7504911,
       radius: [
         GeofenceRadius(id: 'radius_25m', length: 15),
-        GeofenceRadius(id: 'radius_100m', length: 100),
-        GeofenceRadius(id: 'radius_200m', length: 200),
+      ],
+    ),
+    Geofence(
+      id: 'place_3',
+      latitude: 52.03938873985288,
+      longitude: -0.7513414498805204,
+      radius: [
+        GeofenceRadius(id: 'radius_25m', length: 15),
+      ],
+    ),
+
+    Geofence(
+      id: 'place_4',
+      latitude: 52.040336047305516,
+      longitude: -0.7479872236508751,
+      radius: [
+        GeofenceRadius(id: 'radius_25m', length: 15),
       ],
     ),
   ];
@@ -154,7 +166,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                             ),
                             centerTitle: true,
                             title: AppbarTitle(
-                              text: "Home "+content2,
+                              text: "Home",
                             ),
                             actions: [
                               Container(
@@ -786,8 +798,18 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                             MainAxisAlignment
                                                                 .center,
                                                             children: [
+                                                              // Text(
+                                                              //   "No Record Found.",
+                                                              //   overflow: TextOverflow
+                                                              //       .ellipsis,
+                                                              //   textAlign:
+                                                              //   TextAlign.center,
+                                                              //   style: AppStyle
+                                                              //       .txtMontserratMedium14Bluegray80001,
+                                                              // )
+
                                                               Text(
-                                                                "No Record Found.",
+                                                                content2,
                                                                 overflow: TextOverflow
                                                                     .ellipsis,
                                                                 textAlign:
@@ -795,6 +817,9 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                                 style: AppStyle
                                                                     .txtMontserratMedium14Bluegray80001,
                                                               )
+
+
+
                                                             ],
                                                           )
                                                         ],
@@ -1061,6 +1086,7 @@ class _HomeScreen_State extends State<HomeScreen> {
 
   }
 
+
   void _Update_DashboardData() async {
     User? user = auth.currentUser;
     if (user != null) {
@@ -1090,3 +1116,5 @@ class _HomeScreen_State extends State<HomeScreen> {
 
   }
 }
+
+
