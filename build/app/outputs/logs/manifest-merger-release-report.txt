@@ -9,6 +9,8 @@ MERGED from [:firebase_core] /Volumes/Software Drive/Freelance Work Space/parkin
 MERGED from [:firebase_core] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-15:19
 MERGED from [:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-18:19
 MERGED from [:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-18:19
+MERGED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-32:19
+MERGED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-32:19
 MERGED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-22:19
 MERGED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-22:19
 MERGED from [:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-22:19
@@ -98,6 +100,7 @@ MERGED from [:geolocator_android] /Volumes/Software Drive/Freelance Work Space/p
 MERGED from [:google_maps_flutter_android] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/google_maps_flutter_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:flutter_plugin_android_lifecycle] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:sqflite] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/sqflite/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-34:12
 MERGED from [:path_provider_android] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/path_provider_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-24:12
 MERGED from [:shared_preferences_android] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/shared_preferences_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
@@ -117,6 +120,7 @@ MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.1] /Users/chaudh
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/chaudhery/.gradle/caches/transforms-3/959102eb5a953a299cba840882b63cd7/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:2:1-23:12
 MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/chaudhery/.gradle/caches/transforms-3/fea1a547dbba92159bd6e8d632afddfb/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.media:media:1.1.0] /Users/chaudhery/.gradle/caches/transforms-3/2804ad2604b71d95c2a80856733f2fdd/transformed/media-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.android.gms:play-services-location:18.0.0] /Users/chaudhery/.gradle/caches/transforms-3/53e2dfb2c0b74cee2126a56fa63e459e/transformed/jetified-play-services-location-18.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:17:1-46:12
@@ -150,8 +154,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/chaudhery/.grad
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/chaudhery/.gradle/caches/transforms-3/b325a7e2e0d5a4cec134f186ef59530c/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/f6a7ff9e23713c2c4b64beff2a96b596/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/6e5f391d5be558f3e319386fec785849/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/chaudhery/.gradle/caches/transforms-3/001c1c3684ec3d631ab7abf3f6421ff3/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chaudhery/.gradle/caches/transforms-3/50125f7e87db6d2bf562babc54211bbd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/chaudhery/.gradle/caches/transforms-3/001c1c3684ec3d631ab7abf3f6421ff3/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/308bfb217cd9080a886d119a19548576/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/e9eccaf61cca67543f8611c65c0c1e8d/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/5eb646ddc34bc2dbf8d2c99ea5908488/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -256,6 +260,8 @@ MERGED from [:flutter_plugin_android_lifecycle] /Volumes/Software Drive/Freelanc
 MERGED from [:flutter_plugin_android_lifecycle] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:sqflite] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/sqflite/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:sqflite] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/sqflite/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:path_provider_android] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/path_provider_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:path_provider_android] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/path_provider_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
@@ -294,6 +300,8 @@ MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradl
 MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/chaudhery/.gradle/caches/transforms-3/fea1a547dbba92159bd6e8d632afddfb/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/chaudhery/.gradle/caches/transforms-3/fea1a547dbba92159bd6e8d632afddfb/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.media:media:1.1.0] /Users/chaudhery/.gradle/caches/transforms-3/2804ad2604b71d95c2a80856733f2fdd/transformed/media-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.1.0] /Users/chaudhery/.gradle/caches/transforms-3/2804ad2604b71d95c2a80856733f2fdd/transformed/media-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-location:18.0.0] /Users/chaudhery/.gradle/caches/transforms-3/53e2dfb2c0b74cee2126a56fa63e459e/transformed/jetified-play-services-location-18.0.0/AndroidManifest.xml:5:5-44
@@ -360,10 +368,10 @@ MERGED from [androidx.tracing:tracing:1.0.0] /Users/chaudhery/.gradle/caches/tra
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/f6a7ff9e23713c2c4b64beff2a96b596/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/6e5f391d5be558f3e319386fec785849/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/6e5f391d5be558f3e319386fec785849/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/chaudhery/.gradle/caches/transforms-3/001c1c3684ec3d631ab7abf3f6421ff3/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/chaudhery/.gradle/caches/transforms-3/001c1c3684ec3d631ab7abf3f6421ff3/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chaudhery/.gradle/caches/transforms-3/50125f7e87db6d2bf562babc54211bbd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chaudhery/.gradle/caches/transforms-3/50125f7e87db6d2bf562babc54211bbd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/chaudhery/.gradle/caches/transforms-3/001c1c3684ec3d631ab7abf3f6421ff3/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/chaudhery/.gradle/caches/transforms-3/001c1c3684ec3d631ab7abf3f6421ff3/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/308bfb217cd9080a886d119a19548576/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/308bfb217cd9080a886d119a19548576/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/chaudhery/.gradle/caches/transforms-3/e9eccaf61cca67543f8611c65c0c1e8d/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
@@ -504,6 +512,62 @@ ADDED from [:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-a
 		ADDED from [:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-69
 	android:name
 		ADDED from [:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-95
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-63
+uses-permission#android.permission.USE_FULL_SCREEN_INTENT
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:11:22-78
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:12:22-76
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:13:5-77
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:13:22-74
+receiver#com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-91
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-97
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:22:9-31:20
+	android:exported
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:23:13-101
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:25:13-30:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:26:17-79
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:26:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:27:17-84
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:27:25-81
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:28:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:28:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:29:25-79
 receiver#com.pravera.flutter_foreground_task.service.BootReceiver
 ADDED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-17:20
 	android:enabled
@@ -514,10 +578,6 @@ ADDED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Spa
 		ADDED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-84
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
 ADDED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-16:29
-action#android.intent.action.BOOT_COMPLETED
-ADDED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:15:17-79
-	android:name
-		ADDED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:15:25-76
 receiver#com.pravera.flutter_foreground_task.service.RestartReceiver
 ADDED from [:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:18:9-21:40
 	android:enabled

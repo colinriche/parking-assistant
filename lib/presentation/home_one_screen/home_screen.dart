@@ -43,11 +43,11 @@ class _HomeScreen_State extends State<HomeScreen> {
 
   final _geofenceList = <Geofence>[
     Geofence(
-      id: 'place_1',
-      latitude: 52.0404497,
-      longitude: -0.7493338,
-      radius: [
-        GeofenceRadius(id: 'radius_25m', length: 15)]
+        id: 'place_1',
+        latitude: 52.0404497,
+        longitude: -0.7493338,
+        radius: [
+          GeofenceRadius(id: 'radius_25m', length: 15)]
     ),
     Geofence(
       id: 'place_2',
@@ -70,6 +70,14 @@ class _HomeScreen_State extends State<HomeScreen> {
       id: 'place_4',
       latitude: 52.040336047305516,
       longitude: -0.7479872236508751,
+      radius: [
+        GeofenceRadius(id: 'radius_25m', length: 15),
+      ],
+    ),
+    Geofence(
+      id: 'place_5',
+      latitude: 33.6183207,
+      longitude: 72.9550881,
       radius: [
         GeofenceRadius(id: 'radius_25m', length: 15),
       ],
@@ -212,7 +220,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                               bottom: 43,
                             ),
                             child: Text(
-                              "Hi, "+name+"!",
+                              "Hi, "+name,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtMontserratBold22,
@@ -432,280 +440,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                       362,
                                     ),
                                     // data area
-                                    child: is_visited ?
-                                    Stack(
-                                      alignment: Alignment.bottomLeft,
-                                      children: [
-                                        Align(
-                                          alignment: Alignment.center,
-                                          child: Padding(
-                                            padding: getPadding(
-                                              left: 10,
-                                              right: 9,
-                                            ),
-                                            child: OutlineGradientButton(
-                                              padding: EdgeInsets.only(
-                                                left: getHorizontalSize(
-                                                  1,
-                                                ),
-                                                top: getVerticalSize(
-                                                  1,
-                                                ),
-                                                right: getHorizontalSize(
-                                                  1,
-                                                ),
-                                                bottom: getVerticalSize(
-                                                  1,
-                                                ),
-                                              ),
-                                              strokeWidth: getHorizontalSize(
-                                                1,
-                                              ),
-                                              gradient: LinearGradient(
-                                                begin: Alignment(
-                                                  0,
-                                                  0,
-                                                ),
-                                                end: Alignment(
-                                                  1,
-                                                  1,
-                                                ),
-                                                colors: [
-                                                  ColorConstant.whiteA700,
-                                                  ColorConstant.whiteA70000,
-                                                ],
-                                              ),
-                                              corners: Corners(
-                                                topLeft: Radius.circular(
-                                                  16,
-                                                ),
-                                                topRight: Radius.circular(
-                                                  16,
-                                                ),
-                                                bottomLeft: Radius.circular(
-                                                  16,
-                                                ),
-                                                bottomRight: Radius.circular(
-                                                  16,
-                                                ),
-                                              ),
-                                              child: Container(
-                                                padding: getPadding(
-                                                  left: 12,
-                                                  top: 11,
-                                                  right: 12,
-                                                  bottom: 11,
-                                                ),
-                                                decoration:
-                                                AppDecoration.outline.copyWith(
-                                                  borderRadius: BorderRadiusStyle
-                                                      .roundedBorder16,
-                                                ),
-                                                child: Column(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  mainAxisAlignment:
-                                                  MainAxisAlignment.end,
-                                                  children: [
-                                                    Padding(
-                                                      padding: getPadding(
-                                                        left: 2,
-                                                        top: 12,
-                                                        right: 4,
-                                                      ),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                        children: [
-                                                          Column(
-                                                            crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .start,
-                                                            mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                            children: [
-                                                              Text(
-                                                                _address,
-                                                                overflow: TextOverflow
-                                                                    .ellipsis,
-                                                                textAlign:
-                                                                TextAlign.left,
-                                                                style: AppStyle
-                                                                    .txtMontserratMedium14Bluegray80001,
-                                                              )
-                                                            ],
-                                                          ),
-                                                          CustomIconButton(
-                                                            height: 40,
-                                                            width: 40,
-                                                            margin: getMargin(
-                                                              bottom: 1,
-                                                            ),
-                                                            variant: IconButtonVariant
-                                                                .OutlineBlack9000f,
-                                                            child: CustomImageView(
-                                                              svgPath: ImageConstant
-                                                                  .imgQrcode,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: getPadding(
-                                                        top: 22,
-                                                        right: 4,
-                                                      ),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                        children: [
-                                                          Text(
-                                                            ''+_latitude.toString(),
-                                                            overflow:
-                                                            TextOverflow.ellipsis,
-                                                            textAlign: TextAlign.left,
-                                                            style: AppStyle
-                                                                .txtMontserratMedium18,
-                                                          ),
-                                                          CustomImageView(
-                                                            svgPath: ImageConstant
-                                                                .imgGroup159,
-                                                            height: getVerticalSize(
-                                                              8,
-                                                            ),
-                                                            width: getHorizontalSize(
-                                                              117,
-                                                            ),
-                                                            margin: getMargin(
-                                                              top: 7,
-                                                              bottom: 6,
-                                                            ),
-                                                          ),
-                                                          Text(
-                                                            ''+_longitude.toString(),
-                                                            overflow:
-                                                            TextOverflow.ellipsis,
-                                                            textAlign: TextAlign.left,
-                                                            style: AppStyle
-                                                                .txtMontserratMedium18,
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: getPadding(
-                                                        top: 18,
-                                                        right: 4,
-                                                        bottom: 18,
-                                                      ),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                        children: [
-                                                          Text(
-                                                            "30 Apr, 2023",
-                                                            overflow:
-                                                            TextOverflow.ellipsis,
-                                                            textAlign: TextAlign.left,
-                                                            style: AppStyle
-                                                                .txtMontserratMedium14Bluegray30003,
-                                                          ),
-                                                          Text(
-                                                            "30 Apr, 2023",
-                                                            overflow:
-                                                            TextOverflow.ellipsis,
-                                                            textAlign: TextAlign.left,
-                                                            style: AppStyle
-                                                                .txtMontserratMedium14Bluegray30003,
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Align(
-                                          alignment: Alignment.bottomLeft,
-                                          child: Container(
-                                            height: getSize(
-                                              20,
-                                            ),
-                                            width: getSize(
-                                              20,
-                                            ),
-                                            margin: getMargin(
-                                              bottom: 45,
-                                            ),
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(
-                                                getHorizontalSize(
-                                                  10,
-                                                ),
-                                              ),
-                                              gradient: LinearGradient(
-                                                begin: Alignment(
-                                                  1,
-                                                  0.5,
-                                                ),
-                                                end: Alignment(
-                                                  0,
-                                                  0.5,
-                                                ),
-                                                colors: [
-                                                  ColorConstant.gray10001,
-                                                  ColorConstant.gray10002,
-                                                  ColorConstant.gray50,
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Align(
-                                          alignment: Alignment.bottomRight,
-                                          child: Container(
-                                            height: getSize(
-                                              20,
-                                            ),
-                                            width: getSize(
-                                              20,
-                                            ),
-                                            margin: getMargin(
-                                              bottom: 45,
-                                            ),
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(
-                                                getHorizontalSize(
-                                                  10,
-                                                ),
-                                              ),
-                                              gradient: LinearGradient(
-                                                begin: Alignment(
-                                                  1,
-                                                  0.5,
-                                                ),
-                                                end: Alignment(
-                                                  0,
-                                                  0.5,
-                                                ),
-                                                colors: [
-                                                  ColorConstant.gray10003,
-                                                  ColorConstant.gray50,
-                                                  ColorConstant.gray10001,
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ) : Stack(
+                                    child: Stack(
                                       alignment: Alignment.bottomLeft,
                                       children: [
                                         Align(
@@ -906,6 +641,953 @@ class _HomeScreen_State extends State<HomeScreen> {
                                         ),
                                       ],
                                     )
+                                   // child: is_visited ?
+                                    // Stack(
+                                    //   alignment: Alignment.bottomLeft,
+                                    //   children: [
+                                    //     Align(
+                                    //       alignment: Alignment.center,
+                                    //       child: Padding(
+                                    //         padding: getPadding(
+                                    //           left: 10,
+                                    //           right: 9,
+                                    //         ),
+                                    //         child: OutlineGradientButton(
+                                    //           padding: EdgeInsets.only(
+                                    //             left: getHorizontalSize(
+                                    //               1,
+                                    //             ),
+                                    //             top: getVerticalSize(
+                                    //               1,
+                                    //             ),
+                                    //             right: getHorizontalSize(
+                                    //               1,
+                                    //             ),
+                                    //             bottom: getVerticalSize(
+                                    //               1,
+                                    //             ),
+                                    //           ),
+                                    //           strokeWidth: getHorizontalSize(
+                                    //             1,
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               0,
+                                    //               0,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               1,
+                                    //               1,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.whiteA700,
+                                    //               ColorConstant.whiteA70000,
+                                    //             ],
+                                    //           ),
+                                    //           corners: Corners(
+                                    //             topLeft: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             topRight: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             bottomLeft: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             bottomRight: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //           ),
+                                    //           child: Container(
+                                    //             padding: getPadding(
+                                    //               left: 12,
+                                    //               top: 11,
+                                    //               right: 12,
+                                    //               bottom: 11,
+                                    //             ),
+                                    //             decoration:
+                                    //             AppDecoration.outline.copyWith(
+                                    //               borderRadius: BorderRadiusStyle
+                                    //                   .roundedBorder16,
+                                    //             ),
+                                    //             child: Column(
+                                    //               mainAxisSize: MainAxisSize.min,
+                                    //               mainAxisAlignment:
+                                    //               MainAxisAlignment.end,
+                                    //               children: [
+                                    //                 Padding(
+                                    //                   padding: getPadding(
+                                    //                     left: 2,
+                                    //                     top: 12,
+                                    //                     right: 4,
+                                    //                   ),
+                                    //                   child: Row(
+                                    //                     mainAxisAlignment:
+                                    //                     MainAxisAlignment
+                                    //                         .spaceBetween,
+                                    //                     children: [
+                                    //                       Column(
+                                    //                         crossAxisAlignment:
+                                    //                         CrossAxisAlignment
+                                    //                             .start,
+                                    //                         mainAxisAlignment:
+                                    //                         MainAxisAlignment
+                                    //                             .start,
+                                    //                         children: [
+                                    //                           Text(
+                                    //                             _address,
+                                    //                             overflow: TextOverflow
+                                    //                                 .ellipsis,
+                                    //                             textAlign:
+                                    //                             TextAlign.left,
+                                    //                             style: AppStyle
+                                    //                                 .txtMontserratMedium14Bluegray80001,
+                                    //                           )
+                                    //                         ],
+                                    //                       ),
+                                    //                       CustomIconButton(
+                                    //                         height: 40,
+                                    //                         width: 40,
+                                    //                         margin: getMargin(
+                                    //                           bottom: 1,
+                                    //                         ),
+                                    //                         variant: IconButtonVariant
+                                    //                             .OutlineBlack9000f,
+                                    //                         child: CustomImageView(
+                                    //                           svgPath: ImageConstant
+                                    //                               .imgQrcode,
+                                    //                         ),
+                                    //                       ),
+                                    //                     ],
+                                    //                   ),
+                                    //                 ),
+                                    //                 Padding(
+                                    //                   padding: getPadding(
+                                    //                     top: 22,
+                                    //                     right: 4,
+                                    //                   ),
+                                    //                   child: Row(
+                                    //                     mainAxisAlignment:
+                                    //                     MainAxisAlignment
+                                    //                         .spaceBetween,
+                                    //                     children: [
+                                    //                       Text(
+                                    //                         ''+_latitude.toString(),
+                                    //                         overflow:
+                                    //                         TextOverflow.ellipsis,
+                                    //                         textAlign: TextAlign.left,
+                                    //                         style: AppStyle
+                                    //                             .txtMontserratMedium18,
+                                    //                       ),
+                                    //                       CustomImageView(
+                                    //                         svgPath: ImageConstant
+                                    //                             .imgGroup159,
+                                    //                         height: getVerticalSize(
+                                    //                           8,
+                                    //                         ),
+                                    //                         width: getHorizontalSize(
+                                    //                           117,
+                                    //                         ),
+                                    //                         margin: getMargin(
+                                    //                           top: 7,
+                                    //                           bottom: 6,
+                                    //                         ),
+                                    //                       ),
+                                    //                       Text(
+                                    //                         ''+_longitude.toString(),
+                                    //                         overflow:
+                                    //                         TextOverflow.ellipsis,
+                                    //                         textAlign: TextAlign.left,
+                                    //                         style: AppStyle
+                                    //                             .txtMontserratMedium18,
+                                    //                       ),
+                                    //                     ],
+                                    //                   ),
+                                    //                 ),
+                                    //                 Padding(
+                                    //                   padding: getPadding(
+                                    //                     top: 18,
+                                    //                     right: 4,
+                                    //                     bottom: 18,
+                                    //                   ),
+                                    //                   child: Row(
+                                    //                     mainAxisAlignment:
+                                    //                     MainAxisAlignment
+                                    //                         .spaceBetween,
+                                    //                     children: [
+                                    //                       Text(
+                                    //                         "30 Apr, 2023",
+                                    //                         overflow:
+                                    //                         TextOverflow.ellipsis,
+                                    //                         textAlign: TextAlign.left,
+                                    //                         style: AppStyle
+                                    //                             .txtMontserratMedium14Bluegray30003,
+                                    //                       ),
+                                    //                       Text(
+                                    //                         "30 Apr, 2023",
+                                    //                         overflow:
+                                    //                         TextOverflow.ellipsis,
+                                    //                         textAlign: TextAlign.left,
+                                    //                         style: AppStyle
+                                    //                             .txtMontserratMedium14Bluegray30003,
+                                    //                       ),
+                                    //                     ],
+                                    //                   ),
+                                    //                 ),
+                                    //
+                                    //               ],
+                                    //             ),
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //     Align(
+                                    //       alignment: Alignment.bottomLeft,
+                                    //       child: Container(
+                                    //         height: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         width: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         margin: getMargin(
+                                    //           bottom: 45,
+                                    //         ),
+                                    //         decoration: BoxDecoration(
+                                    //           borderRadius: BorderRadius.circular(
+                                    //             getHorizontalSize(
+                                    //               10,
+                                    //             ),
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               1,
+                                    //               0.5,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               0,
+                                    //               0.5,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.gray10001,
+                                    //               ColorConstant.gray10002,
+                                    //               ColorConstant.gray50,
+                                    //             ],
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //     Align(
+                                    //       alignment: Alignment.bottomRight,
+                                    //       child: Container(
+                                    //         height: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         width: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         margin: getMargin(
+                                    //           bottom: 45,
+                                    //         ),
+                                    //         decoration: BoxDecoration(
+                                    //           borderRadius: BorderRadius.circular(
+                                    //             getHorizontalSize(
+                                    //               10,
+                                    //             ),
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               1,
+                                    //               0.5,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               0,
+                                    //               0.5,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.gray10003,
+                                    //               ColorConstant.gray50,
+                                    //               ColorConstant.gray10001,
+                                    //             ],
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //   ],
+                                    // ) : Stack(
+                                    //   alignment: Alignment.bottomLeft,
+                                    //   children: [
+                                    //     Align(
+                                    //       alignment: Alignment.center,
+                                    //       child: Padding(
+                                    //         padding: getPadding(
+                                    //           left: 10,
+                                    //           right: 9,
+                                    //         ),
+                                    //         child: OutlineGradientButton(
+                                    //           padding: EdgeInsets.only(
+                                    //             left: getHorizontalSize(
+                                    //               1,
+                                    //             ),
+                                    //             top: getVerticalSize(
+                                    //               1,
+                                    //             ),
+                                    //             right: getHorizontalSize(
+                                    //               1,
+                                    //             ),
+                                    //             bottom: getVerticalSize(
+                                    //               1,
+                                    //             ),
+                                    //           ),
+                                    //           strokeWidth: getHorizontalSize(
+                                    //             1,
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               0,
+                                    //               0,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               1,
+                                    //               1,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.whiteA700,
+                                    //               ColorConstant.whiteA70000,
+                                    //             ],
+                                    //           ),
+                                    //           corners: Corners(
+                                    //             topLeft: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             topRight: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             bottomLeft: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             bottomRight: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //           ),
+                                    //           child: Container(
+                                    //             padding: getPadding(
+                                    //               left: 12,
+                                    //               top: 11,
+                                    //               right: 12,
+                                    //               bottom: 11,
+                                    //             ),
+                                    //             decoration:
+                                    //             AppDecoration.outline.copyWith(
+                                    //               borderRadius: BorderRadiusStyle
+                                    //                   .roundedBorder16,
+                                    //             ),
+                                    //             child: Column(
+                                    //               mainAxisSize: MainAxisSize.min,
+                                    //               mainAxisAlignment:
+                                    //               MainAxisAlignment.center,
+                                    //               children: [
+                                    //                 Padding(
+                                    //                   padding: getPadding(
+                                    //                     left: 2,
+                                    //                     top: 70,
+                                    //                     bottom:70,
+                                    //                     right: 4,
+                                    //                   ),
+                                    //                   child: Row(
+                                    //                     mainAxisAlignment:
+                                    //                     MainAxisAlignment
+                                    //                         .center,
+                                    //                     children: [
+                                    //                       Column(
+                                    //                         crossAxisAlignment:
+                                    //                         CrossAxisAlignment
+                                    //                             .center,
+                                    //                         mainAxisAlignment:
+                                    //                         MainAxisAlignment
+                                    //                             .center,
+                                    //                         children: [
+                                    //                           // Text(
+                                    //                           //   "No Record Found.",
+                                    //                           //   overflow: TextOverflow
+                                    //                           //       .ellipsis,
+                                    //                           //   textAlign:
+                                    //                           //   TextAlign.center,
+                                    //                           //   style: AppStyle
+                                    //                           //       .txtMontserratMedium14Bluegray80001,
+                                    //                           // )
+                                    //
+                                    //                           Text(
+                                    //                             content2,
+                                    //                             overflow: TextOverflow
+                                    //                                 .ellipsis,
+                                    //                             textAlign:
+                                    //                             TextAlign.center,
+                                    //                             style: AppStyle
+                                    //                                 .txtMontserratMedium14Bluegray80001,
+                                    //                           )
+                                    //
+                                    //
+                                    //
+                                    //                         ],
+                                    //                       )
+                                    //                     ],
+                                    //                   ),
+                                    //                 )
+                                    //
+                                    //               ],
+                                    //             ),
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //     Align(
+                                    //       alignment: Alignment.bottomLeft,
+                                    //       child: Container(
+                                    //         height: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         width: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         margin: getMargin(
+                                    //           bottom: 45,
+                                    //         ),
+                                    //         decoration: BoxDecoration(
+                                    //           borderRadius: BorderRadius.circular(
+                                    //             getHorizontalSize(
+                                    //               10,
+                                    //             ),
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               1,
+                                    //               0.5,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               0,
+                                    //               0.5,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.gray10001,
+                                    //               ColorConstant.gray10002,
+                                    //               ColorConstant.gray50,
+                                    //             ],
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //     Align(
+                                    //       alignment: Alignment.bottomRight,
+                                    //       child: Container(
+                                    //         height: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         width: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         margin: getMargin(
+                                    //           bottom: 45,
+                                    //         ),
+                                    //         decoration: BoxDecoration(
+                                    //           borderRadius: BorderRadius.circular(
+                                    //             getHorizontalSize(
+                                    //               10,
+                                    //             ),
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               1,
+                                    //               0.5,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               0,
+                                    //               0.5,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.gray10003,
+                                    //               ColorConstant.gray50,
+                                    //               ColorConstant.gray10001,
+                                    //             ],
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //   ],
+                                    // )child: is_visited ?
+                                    // Stack(
+                                    //   alignment: Alignment.bottomLeft,
+                                    //   children: [
+                                    //     Align(
+                                    //       alignment: Alignment.center,
+                                    //       child: Padding(
+                                    //         padding: getPadding(
+                                    //           left: 10,
+                                    //           right: 9,
+                                    //         ),
+                                    //         child: OutlineGradientButton(
+                                    //           padding: EdgeInsets.only(
+                                    //             left: getHorizontalSize(
+                                    //               1,
+                                    //             ),
+                                    //             top: getVerticalSize(
+                                    //               1,
+                                    //             ),
+                                    //             right: getHorizontalSize(
+                                    //               1,
+                                    //             ),
+                                    //             bottom: getVerticalSize(
+                                    //               1,
+                                    //             ),
+                                    //           ),
+                                    //           strokeWidth: getHorizontalSize(
+                                    //             1,
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               0,
+                                    //               0,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               1,
+                                    //               1,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.whiteA700,
+                                    //               ColorConstant.whiteA70000,
+                                    //             ],
+                                    //           ),
+                                    //           corners: Corners(
+                                    //             topLeft: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             topRight: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             bottomLeft: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             bottomRight: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //           ),
+                                    //           child: Container(
+                                    //             padding: getPadding(
+                                    //               left: 12,
+                                    //               top: 11,
+                                    //               right: 12,
+                                    //               bottom: 11,
+                                    //             ),
+                                    //             decoration:
+                                    //             AppDecoration.outline.copyWith(
+                                    //               borderRadius: BorderRadiusStyle
+                                    //                   .roundedBorder16,
+                                    //             ),
+                                    //             child: Column(
+                                    //               mainAxisSize: MainAxisSize.min,
+                                    //               mainAxisAlignment:
+                                    //               MainAxisAlignment.end,
+                                    //               children: [
+                                    //                 Padding(
+                                    //                   padding: getPadding(
+                                    //                     left: 2,
+                                    //                     top: 12,
+                                    //                     right: 4,
+                                    //                   ),
+                                    //                   child: Row(
+                                    //                     mainAxisAlignment:
+                                    //                     MainAxisAlignment
+                                    //                         .spaceBetween,
+                                    //                     children: [
+                                    //                       Column(
+                                    //                         crossAxisAlignment:
+                                    //                         CrossAxisAlignment
+                                    //                             .start,
+                                    //                         mainAxisAlignment:
+                                    //                         MainAxisAlignment
+                                    //                             .start,
+                                    //                         children: [
+                                    //                           Text(
+                                    //                             _address,
+                                    //                             overflow: TextOverflow
+                                    //                                 .ellipsis,
+                                    //                             textAlign:
+                                    //                             TextAlign.left,
+                                    //                             style: AppStyle
+                                    //                                 .txtMontserratMedium14Bluegray80001,
+                                    //                           )
+                                    //                         ],
+                                    //                       ),
+                                    //                       CustomIconButton(
+                                    //                         height: 40,
+                                    //                         width: 40,
+                                    //                         margin: getMargin(
+                                    //                           bottom: 1,
+                                    //                         ),
+                                    //                         variant: IconButtonVariant
+                                    //                             .OutlineBlack9000f,
+                                    //                         child: CustomImageView(
+                                    //                           svgPath: ImageConstant
+                                    //                               .imgQrcode,
+                                    //                         ),
+                                    //                       ),
+                                    //                     ],
+                                    //                   ),
+                                    //                 ),
+                                    //                 Padding(
+                                    //                   padding: getPadding(
+                                    //                     top: 22,
+                                    //                     right: 4,
+                                    //                   ),
+                                    //                   child: Row(
+                                    //                     mainAxisAlignment:
+                                    //                     MainAxisAlignment
+                                    //                         .spaceBetween,
+                                    //                     children: [
+                                    //                       Text(
+                                    //                         ''+_latitude.toString(),
+                                    //                         overflow:
+                                    //                         TextOverflow.ellipsis,
+                                    //                         textAlign: TextAlign.left,
+                                    //                         style: AppStyle
+                                    //                             .txtMontserratMedium18,
+                                    //                       ),
+                                    //                       CustomImageView(
+                                    //                         svgPath: ImageConstant
+                                    //                             .imgGroup159,
+                                    //                         height: getVerticalSize(
+                                    //                           8,
+                                    //                         ),
+                                    //                         width: getHorizontalSize(
+                                    //                           117,
+                                    //                         ),
+                                    //                         margin: getMargin(
+                                    //                           top: 7,
+                                    //                           bottom: 6,
+                                    //                         ),
+                                    //                       ),
+                                    //                       Text(
+                                    //                         ''+_longitude.toString(),
+                                    //                         overflow:
+                                    //                         TextOverflow.ellipsis,
+                                    //                         textAlign: TextAlign.left,
+                                    //                         style: AppStyle
+                                    //                             .txtMontserratMedium18,
+                                    //                       ),
+                                    //                     ],
+                                    //                   ),
+                                    //                 ),
+                                    //                 Padding(
+                                    //                   padding: getPadding(
+                                    //                     top: 18,
+                                    //                     right: 4,
+                                    //                     bottom: 18,
+                                    //                   ),
+                                    //                   child: Row(
+                                    //                     mainAxisAlignment:
+                                    //                     MainAxisAlignment
+                                    //                         .spaceBetween,
+                                    //                     children: [
+                                    //                       Text(
+                                    //                         "30 Apr, 2023",
+                                    //                         overflow:
+                                    //                         TextOverflow.ellipsis,
+                                    //                         textAlign: TextAlign.left,
+                                    //                         style: AppStyle
+                                    //                             .txtMontserratMedium14Bluegray30003,
+                                    //                       ),
+                                    //                       Text(
+                                    //                         "30 Apr, 2023",
+                                    //                         overflow:
+                                    //                         TextOverflow.ellipsis,
+                                    //                         textAlign: TextAlign.left,
+                                    //                         style: AppStyle
+                                    //                             .txtMontserratMedium14Bluegray30003,
+                                    //                       ),
+                                    //                     ],
+                                    //                   ),
+                                    //                 ),
+                                    //
+                                    //               ],
+                                    //             ),
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //     Align(
+                                    //       alignment: Alignment.bottomLeft,
+                                    //       child: Container(
+                                    //         height: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         width: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         margin: getMargin(
+                                    //           bottom: 45,
+                                    //         ),
+                                    //         decoration: BoxDecoration(
+                                    //           borderRadius: BorderRadius.circular(
+                                    //             getHorizontalSize(
+                                    //               10,
+                                    //             ),
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               1,
+                                    //               0.5,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               0,
+                                    //               0.5,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.gray10001,
+                                    //               ColorConstant.gray10002,
+                                    //               ColorConstant.gray50,
+                                    //             ],
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //     Align(
+                                    //       alignment: Alignment.bottomRight,
+                                    //       child: Container(
+                                    //         height: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         width: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         margin: getMargin(
+                                    //           bottom: 45,
+                                    //         ),
+                                    //         decoration: BoxDecoration(
+                                    //           borderRadius: BorderRadius.circular(
+                                    //             getHorizontalSize(
+                                    //               10,
+                                    //             ),
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               1,
+                                    //               0.5,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               0,
+                                    //               0.5,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.gray10003,
+                                    //               ColorConstant.gray50,
+                                    //               ColorConstant.gray10001,
+                                    //             ],
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //   ],
+                                    // ) : Stack(
+                                    //   alignment: Alignment.bottomLeft,
+                                    //   children: [
+                                    //     Align(
+                                    //       alignment: Alignment.center,
+                                    //       child: Padding(
+                                    //         padding: getPadding(
+                                    //           left: 10,
+                                    //           right: 9,
+                                    //         ),
+                                    //         child: OutlineGradientButton(
+                                    //           padding: EdgeInsets.only(
+                                    //             left: getHorizontalSize(
+                                    //               1,
+                                    //             ),
+                                    //             top: getVerticalSize(
+                                    //               1,
+                                    //             ),
+                                    //             right: getHorizontalSize(
+                                    //               1,
+                                    //             ),
+                                    //             bottom: getVerticalSize(
+                                    //               1,
+                                    //             ),
+                                    //           ),
+                                    //           strokeWidth: getHorizontalSize(
+                                    //             1,
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               0,
+                                    //               0,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               1,
+                                    //               1,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.whiteA700,
+                                    //               ColorConstant.whiteA70000,
+                                    //             ],
+                                    //           ),
+                                    //           corners: Corners(
+                                    //             topLeft: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             topRight: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             bottomLeft: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //             bottomRight: Radius.circular(
+                                    //               16,
+                                    //             ),
+                                    //           ),
+                                    //           child: Container(
+                                    //             padding: getPadding(
+                                    //               left: 12,
+                                    //               top: 11,
+                                    //               right: 12,
+                                    //               bottom: 11,
+                                    //             ),
+                                    //             decoration:
+                                    //             AppDecoration.outline.copyWith(
+                                    //               borderRadius: BorderRadiusStyle
+                                    //                   .roundedBorder16,
+                                    //             ),
+                                    //             child: Column(
+                                    //               mainAxisSize: MainAxisSize.min,
+                                    //               mainAxisAlignment:
+                                    //               MainAxisAlignment.center,
+                                    //               children: [
+                                    //                 Padding(
+                                    //                   padding: getPadding(
+                                    //                     left: 2,
+                                    //                     top: 70,
+                                    //                     bottom:70,
+                                    //                     right: 4,
+                                    //                   ),
+                                    //                   child: Row(
+                                    //                     mainAxisAlignment:
+                                    //                     MainAxisAlignment
+                                    //                         .center,
+                                    //                     children: [
+                                    //                       Column(
+                                    //                         crossAxisAlignment:
+                                    //                         CrossAxisAlignment
+                                    //                             .center,
+                                    //                         mainAxisAlignment:
+                                    //                         MainAxisAlignment
+                                    //                             .center,
+                                    //                         children: [
+                                    //                           // Text(
+                                    //                           //   "No Record Found.",
+                                    //                           //   overflow: TextOverflow
+                                    //                           //       .ellipsis,
+                                    //                           //   textAlign:
+                                    //                           //   TextAlign.center,
+                                    //                           //   style: AppStyle
+                                    //                           //       .txtMontserratMedium14Bluegray80001,
+                                    //                           // )
+                                    //
+                                    //                           Text(
+                                    //                             content2,
+                                    //                             overflow: TextOverflow
+                                    //                                 .ellipsis,
+                                    //                             textAlign:
+                                    //                             TextAlign.center,
+                                    //                             style: AppStyle
+                                    //                                 .txtMontserratMedium14Bluegray80001,
+                                    //                           )
+                                    //
+                                    //
+                                    //
+                                    //                         ],
+                                    //                       )
+                                    //                     ],
+                                    //                   ),
+                                    //                 )
+                                    //
+                                    //               ],
+                                    //             ),
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //     Align(
+                                    //       alignment: Alignment.bottomLeft,
+                                    //       child: Container(
+                                    //         height: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         width: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         margin: getMargin(
+                                    //           bottom: 45,
+                                    //         ),
+                                    //         decoration: BoxDecoration(
+                                    //           borderRadius: BorderRadius.circular(
+                                    //             getHorizontalSize(
+                                    //               10,
+                                    //             ),
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               1,
+                                    //               0.5,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               0,
+                                    //               0.5,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.gray10001,
+                                    //               ColorConstant.gray10002,
+                                    //               ColorConstant.gray50,
+                                    //             ],
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //     Align(
+                                    //       alignment: Alignment.bottomRight,
+                                    //       child: Container(
+                                    //         height: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         width: getSize(
+                                    //           20,
+                                    //         ),
+                                    //         margin: getMargin(
+                                    //           bottom: 45,
+                                    //         ),
+                                    //         decoration: BoxDecoration(
+                                    //           borderRadius: BorderRadius.circular(
+                                    //             getHorizontalSize(
+                                    //               10,
+                                    //             ),
+                                    //           ),
+                                    //           gradient: LinearGradient(
+                                    //             begin: Alignment(
+                                    //               1,
+                                    //               0.5,
+                                    //             ),
+                                    //             end: Alignment(
+                                    //               0,
+                                    //               0.5,
+                                    //             ),
+                                    //             colors: [
+                                    //               ColorConstant.gray10003,
+                                    //               ColorConstant.gray50,
+                                    //               ColorConstant.gray10001,
+                                    //             ],
+                                    //           ),
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                    //   ],
+                                    // )
                                 ),
                               ),
                             ],

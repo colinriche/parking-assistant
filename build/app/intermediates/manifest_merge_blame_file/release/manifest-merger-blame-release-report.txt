@@ -37,382 +37,431 @@
 19    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
 19-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:11:5-94
 19-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:11:22-91
-20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-20-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:26:5-79
-20-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:26:22-76
-21    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-21-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:25:5-79
-21-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:25:22-76
-22
-23    <uses-feature
-23-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:26:5-28:35
-24        android:glEsVersion="0x00020000"
-24-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:27:9-41
-25        android:required="true" />
-25-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:28:9-32
-26
-27    <queries>
-27-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:30:5-34:15
-28
-29        <!-- Needs to be explicitly declared on Android R+ -->
-30        <package android:name="com.google.android.apps.maps" />
-30-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:9-64
-30-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:18-61
-31    </queries>
-32
-33    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-33-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:26:5-110
-33-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:26:22-107
-34
-35    <application
-36        android:name="android.app.Application"
-36-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:15:9-42
-37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.6.0] /Users/chaudhery/.gradle/caches/transforms-3/aee6bcf100250b4da6af345dbf21bc13/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
-38        android:icon="@mipmap/ic_launcher"
-38-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:17:9-43
-39        android:label="parking_assistant"
-39-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:14:9-42
-40        android:usesCleartextTraffic="true" >
-40-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:16:9-44
-41        <meta-data
-41-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:19:9-21:69
-42            android:name="com.google.android.gms.version"
-42-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:20:13-58
-43            android:value="@integer/google_play_services_version" />
-43-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:21:13-66
-44        <meta-data
-44-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:22:9-24:71
-45            android:name="com.google.android.maps.v2.API_KEY"
-45-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:23:13-62
-46            android:value="AIzaSyCxzZvKT560MJWr4AGMdtExenoqrc2CCrY" />
-46-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:24:13-68
-47
-48        <activity
-48-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:27:9-47:20
-49            android:name="parking.assistant.parking_assistant.MainActivity"
-49-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:28:13-41
-50            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-50-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:32:13-163
-51            android:exported="true"
-51-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:29:13-36
-52            android:hardwareAccelerated="true"
-52-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:33:13-47
-53            android:launchMode="singleTop"
-53-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:30:13-43
-54            android:theme="@style/LaunchTheme"
-54-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:31:13-47
-55            android:windowSoftInputMode="adjustResize" >
-55-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:34:13-55
-56
-57            <!--
-58                 Specifies an Android theme to apply to this Activity as soon as
-59                 the Android process has started. This theme is visible to the user
-60                 while the Flutter UI initializes. After that, this theme continues
-61                 to determine the Window background behind the Flutter UI.
-62            -->
-63            <meta-data
-63-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:39:13-42:17
-64                android:name="io.flutter.embedding.android.NormalTheme"
-64-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:40:15-70
-65                android:resource="@style/NormalTheme" />
-65-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:41:15-52
-66
-67            <intent-filter>
-67-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:43:13-46:29
-68                <action android:name="android.intent.action.MAIN" />
-68-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:44:17-68
-68-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:44:25-66
-69
-70                <category android:name="android.intent.category.LAUNCHER" />
-70-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:45:17-76
-70-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:45:27-74
-71            </intent-filter>
-72        </activity>
-73
-74        <service
-74-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:50:9-53:43
-75            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
-75-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:51:13-89
-76            android:foregroundServiceType="location"
-76-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:52:13-53
-77            android:stopWithTask="true" />
-77-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:53:13-40
+20    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+20-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-81
+20-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-78
+21    <uses-permission android:name="android.permission.VIBRATE" />
+21-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-66
+21-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-63
+22    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+22-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-81
+22-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:11:22-78
+23    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+23-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-79
+23-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:12:22-76
+24    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+24-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:13:5-77
+24-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:13:22-74
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:26:5-79
+25-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:26:22-76
+26    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+26-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:25:5-79
+26-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:25:22-76
+27
+28    <uses-feature
+28-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:26:5-28:35
+29        android:glEsVersion="0x00020000"
+29-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:27:9-41
+30        android:required="true" />
+30-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:28:9-32
+31
+32    <queries>
+32-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:30:5-34:15
+33
+34        <!-- Needs to be explicitly declared on Android R+ -->
+35        <package android:name="com.google.android.apps.maps" />
+35-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:9-64
+35-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:18-61
+36    </queries>
+37
+38    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+38-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:26:5-110
+38-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:26:22-107
+39
+40    <application
+41        android:name="android.app.Application"
+41-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:15:9-42
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.6.0] /Users/chaudhery/.gradle/caches/transforms-3/aee6bcf100250b4da6af345dbf21bc13/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+43        android:icon="@mipmap/ic_launcher"
+43-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:17:9-43
+44        android:label="parking_assistant"
+44-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:14:9-42
+45        android:usesCleartextTraffic="true" >
+45-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:16:9-44
+46        <meta-data
+46-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:19:9-21:69
+47            android:name="com.google.android.gms.version"
+47-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:20:13-58
+48            android:value="@integer/google_play_services_version" />
+48-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:21:13-66
+49        <meta-data
+49-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:22:9-24:71
+50            android:name="com.google.android.maps.v2.API_KEY"
+50-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:23:13-62
+51            android:value="AIzaSyCxzZvKT560MJWr4AGMdtExenoqrc2CCrY" />
+51-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:24:13-68
+52
+53        <activity
+53-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:27:9-47:20
+54            android:name="parking.assistant.parking_assistant.MainActivity"
+54-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:28:13-41
+55            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+55-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:32:13-163
+56            android:exported="true"
+56-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:29:13-36
+57            android:hardwareAccelerated="true"
+57-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:33:13-47
+58            android:launchMode="singleTop"
+58-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:30:13-43
+59            android:theme="@style/LaunchTheme"
+59-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:31:13-47
+60            android:windowSoftInputMode="adjustResize" >
+60-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:34:13-55
+61
+62            <!--
+63                 Specifies an Android theme to apply to this Activity as soon as
+64                 the Android process has started. This theme is visible to the user
+65                 while the Flutter UI initializes. After that, this theme continues
+66                 to determine the Window background behind the Flutter UI.
+67            -->
+68            <meta-data
+68-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:39:13-42:17
+69                android:name="io.flutter.embedding.android.NormalTheme"
+69-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:40:15-70
+70                android:resource="@style/NormalTheme" />
+70-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:41:15-52
+71
+72            <intent-filter>
+72-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:43:13-46:29
+73                <action android:name="android.intent.action.MAIN" />
+73-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:44:17-68
+73-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:44:25-66
+74
+75                <category android:name="android.intent.category.LAUNCHER" />
+75-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:45:17-76
+75-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:45:27-74
+76            </intent-filter>
+77        </activity>
 78
-79        <!--
-80             Don't delete the meta-data below.
-81             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-82        -->
-83        <meta-data
-83-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:57:9-59:33
-84            android:name="flutterEmbedding"
-84-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:58:13-44
-85            android:value="2" />
-85-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:59:13-30
-86
-87        <service
-87-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-14:19
-88            android:name="com.google.firebase.components.ComponentDiscoveryService"
-88-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:10:18-89
-89            android:directBootAware="true"
-89-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:34:13-43
-90            android:exported="false" >
-90-->[com.google.firebase:firebase-database-ktx:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/34e982c9e4fdc4d738f5cea60ea69f9d/transformed/jetified-firebase-database-ktx-20.2.0/AndroidManifest.xml:13:13-37
-91            <meta-data
-91-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
-92                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-92-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-127
-93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
-94            <meta-data
-94-->[:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
-95                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-95-->[:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-124
-96                android:value="com.google.firebase.components.ComponentRegistrar" />
-96-->[:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
-97            <meta-data
-97-->[:firebase_core] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
-98                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-98-->[:firebase_core] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-124
-99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->[:firebase_core] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
-100            <meta-data
-100-->[com.google.firebase:firebase-database-ktx:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/34e982c9e4fdc4d738f5cea60ea69f9d/transformed/jetified-firebase-database-ktx-20.2.0/AndroidManifest.xml:14:13-16:85
-101                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
-101-->[com.google.firebase:firebase-database-ktx:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/34e982c9e4fdc4d738f5cea60ea69f9d/transformed/jetified-firebase-database-ktx-20.2.0/AndroidManifest.xml:15:17-124
-102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[com.google.firebase:firebase-database-ktx:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/34e982c9e4fdc4d738f5cea60ea69f9d/transformed/jetified-firebase-database-ktx-20.2.0/AndroidManifest.xml:16:17-82
-103            <meta-data
-103-->[com.google.firebase:firebase-auth-ktx:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/6ae63130b89b54d31d7f929a7611dd8a/transformed/jetified-firebase-auth-ktx-21.3.0/AndroidManifest.xml:11:13-13:85
-104                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
-104-->[com.google.firebase:firebase-auth-ktx:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/6ae63130b89b54d31d7f929a7611dd8a/transformed/jetified-firebase-auth-ktx-21.3.0/AndroidManifest.xml:12:17-116
-105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[com.google.firebase:firebase-auth-ktx:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/6ae63130b89b54d31d7f929a7611dd8a/transformed/jetified-firebase-auth-ktx-21.3.0/AndroidManifest.xml:13:17-82
-106            <meta-data
-106-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/dc1df134c43d8c3ea87a39c057eb64a1/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:14:13-16:85
-107                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
-107-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/dc1df134c43d8c3ea87a39c057eb64a1/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:15:17-113
-108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/dc1df134c43d8c3ea87a39c057eb64a1/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:16:17-82
-109            <meta-data
-109-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:69:13-71:85
-110                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-110-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:70:17-109
-111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:71:17-82
-112            <meta-data
-112-->[com.google.firebase:firebase-database:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/984fd1045b878a79790620a65ff96426/transformed/jetified-firebase-database-20.2.0/AndroidManifest.xml:31:13-33:85
-113                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-113-->[com.google.firebase:firebase-database:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/984fd1045b878a79790620a65ff96426/transformed/jetified-firebase-database-20.2.0/AndroidManifest.xml:32:17-109
-114                android:value="com.google.firebase.components.ComponentRegistrar" />
-114-->[com.google.firebase:firebase-database:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/984fd1045b878a79790620a65ff96426/transformed/jetified-firebase-database-20.2.0/AndroidManifest.xml:33:17-82
-115            <meta-data
-115-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:31:13-33:85
-116                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-116-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:32:17-139
-117                android:value="com.google.firebase.components.ComponentRegistrar" />
-117-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:33:17-82
-118            <meta-data
-118-->[com.google.firebase:firebase-installations:17.1.3] /Users/chaudhery/.gradle/caches/transforms-3/959102eb5a953a299cba840882b63cd7/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:17:13-19:85
-119                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-119-->[com.google.firebase:firebase-installations:17.1.3] /Users/chaudhery/.gradle/caches/transforms-3/959102eb5a953a299cba840882b63cd7/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:18:17-127
-120                android:value="com.google.firebase.components.ComponentRegistrar" />
-120-->[com.google.firebase:firebase-installations:17.1.3] /Users/chaudhery/.gradle/caches/transforms-3/959102eb5a953a299cba840882b63cd7/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:19:17-82
-121        </service>
-122        <service
-122-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:13:9-17:72
-123            android:name="com.pravera.fl_location.service.LocationServicesStatusIntentService"
-123-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-95
-124            android:enabled="true"
-124-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:15:13-35
-125            android:exported="false"
-125-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:16:13-37
-126            android:permission="android.permission.BIND_JOB_SERVICE" />
-126-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-69
-127
-128        <receiver
-128-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-17:20
-129            android:name="com.pravera.flutter_foreground_task.service.BootReceiver"
-129-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-84
-130            android:enabled="true"
-130-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-35
-131            android:exported="true" >
-131-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-36
-132            <intent-filter>
-132-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-16:29
-133                <action android:name="android.intent.action.BOOT_COMPLETED" />
-133-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:15:17-79
-133-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:15:25-76
-134            </intent-filter>
-135        </receiver>
+79        <service
+79-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:50:9-53:43
+80            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
+80-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:51:13-89
+81            android:foregroundServiceType="location"
+81-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:52:13-53
+82            android:stopWithTask="true" />
+82-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:53:13-40
+83
+84        <!--
+85             Don't delete the meta-data below.
+86             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+87        -->
+88        <meta-data
+88-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:57:9-59:33
+89            android:name="flutterEmbedding"
+89-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:58:13-44
+90            android:value="2" />
+90-->/Volumes/Software Drive/Freelance Work Space/parking-assistant/android/app/src/main/AndroidManifest.xml:59:13-30
+91
+92        <service
+92-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-14:19
+93            android:name="com.google.firebase.components.ComponentDiscoveryService"
+93-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:10:18-89
+94            android:directBootAware="true"
+94-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:34:13-43
+95            android:exported="false" >
+95-->[com.google.firebase:firebase-database-ktx:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/34e982c9e4fdc4d738f5cea60ea69f9d/transformed/jetified-firebase-database-ktx-20.2.0/AndroidManifest.xml:13:13-37
+96            <meta-data
+96-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
+97                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
+97-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-127
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[:firebase_database] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_database/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
+99            <meta-data
+99-->[:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
+100                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+100-->[:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-124
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[:firebase_auth] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
+102            <meta-data
+102-->[:firebase_core] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
+103                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+103-->[:firebase_core] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-124
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[:firebase_core] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-database-ktx:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/34e982c9e4fdc4d738f5cea60ea69f9d/transformed/jetified-firebase-database-ktx-20.2.0/AndroidManifest.xml:14:13-16:85
+106                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
+106-->[com.google.firebase:firebase-database-ktx:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/34e982c9e4fdc4d738f5cea60ea69f9d/transformed/jetified-firebase-database-ktx-20.2.0/AndroidManifest.xml:15:17-124
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-database-ktx:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/34e982c9e4fdc4d738f5cea60ea69f9d/transformed/jetified-firebase-database-ktx-20.2.0/AndroidManifest.xml:16:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-auth-ktx:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/6ae63130b89b54d31d7f929a7611dd8a/transformed/jetified-firebase-auth-ktx-21.3.0/AndroidManifest.xml:11:13-13:85
+109                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+109-->[com.google.firebase:firebase-auth-ktx:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/6ae63130b89b54d31d7f929a7611dd8a/transformed/jetified-firebase-auth-ktx-21.3.0/AndroidManifest.xml:12:17-116
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-auth-ktx:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/6ae63130b89b54d31d7f929a7611dd8a/transformed/jetified-firebase-auth-ktx-21.3.0/AndroidManifest.xml:13:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/dc1df134c43d8c3ea87a39c057eb64a1/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:14:13-16:85
+112                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+112-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/dc1df134c43d8c3ea87a39c057eb64a1/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:15:17-113
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/dc1df134c43d8c3ea87a39c057eb64a1/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:16:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:69:13-71:85
+115                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+115-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:70:17-109
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:71:17-82
+117            <meta-data
+117-->[com.google.firebase:firebase-database:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/984fd1045b878a79790620a65ff96426/transformed/jetified-firebase-database-20.2.0/AndroidManifest.xml:31:13-33:85
+118                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+118-->[com.google.firebase:firebase-database:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/984fd1045b878a79790620a65ff96426/transformed/jetified-firebase-database-20.2.0/AndroidManifest.xml:32:17-109
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.firebase:firebase-database:20.2.0] /Users/chaudhery/.gradle/caches/transforms-3/984fd1045b878a79790620a65ff96426/transformed/jetified-firebase-database-20.2.0/AndroidManifest.xml:33:17-82
+120            <meta-data
+120-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:31:13-33:85
+121                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+121-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:32:17-139
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/dece129dc5fcb95b06e0ead090dc4f8e/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:33:17-82
+123            <meta-data
+123-->[com.google.firebase:firebase-installations:17.1.3] /Users/chaudhery/.gradle/caches/transforms-3/959102eb5a953a299cba840882b63cd7/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:17:13-19:85
+124                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+124-->[com.google.firebase:firebase-installations:17.1.3] /Users/chaudhery/.gradle/caches/transforms-3/959102eb5a953a299cba840882b63cd7/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:18:17-127
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[com.google.firebase:firebase-installations:17.1.3] /Users/chaudhery/.gradle/caches/transforms-3/959102eb5a953a299cba840882b63cd7/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:19:17-82
+126        </service>
+127        <service
+127-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:13:9-17:72
+128            android:name="com.pravera.fl_location.service.LocationServicesStatusIntentService"
+128-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-95
+129            android:enabled="true"
+129-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:15:13-35
+130            android:exported="false"
+130-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:16:13-37
+131            android:permission="android.permission.BIND_JOB_SERVICE" />
+131-->[:fl_location] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/fl_location/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-69
+132
+133        <receiver
+133-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:16:9-18:40
+134            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+134-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-91
+135            android:exported="false" />
+135-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-37
 136        <receiver
-136-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:18:9-21:40
-137            android:name="com.pravera.flutter_foreground_task.service.RestartReceiver"
-137-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-87
-138            android:enabled="true"
-138-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-35
-139            android:exported="false" />
-139-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-37
-140        <receiver
-140-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:11:9-15:47
-141            android:name="com.pravera.flutter_activity_recognition.service.ActivityRecognitionIntentReceiver"
-141-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-110
-142            android:enabled="true"
-142-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-35
-143            android:exported="true" />
-143-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-36
-144
-145        <service
-145-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:17:9-21:72
-146            android:name="com.pravera.flutter_activity_recognition.service.ActivityRecognitionIntentService"
-146-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-109
-147            android:enabled="true"
-147-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-35
-148            android:exported="false"
-148-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-37
-149            android:permission="android.permission.BIND_JOB_SERVICE" />
-149-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-69
-150
-151        <activity
-151-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:29:9-46:20
-152            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-152-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:30:13-80
-153            android:excludeFromRecents="true"
-153-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:31:13-46
-154            android:exported="true"
-154-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:32:13-36
-155            android:launchMode="singleTask"
-155-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:33:13-44
-156            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-156-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:34:13-72
-157            <intent-filter>
-157-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:35:13-45:29
-158                <action android:name="android.intent.action.VIEW" />
-158-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:17-69
-158-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:25-66
-159
-160                <category android:name="android.intent.category.DEFAULT" />
-160-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:17-76
-160-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:27-73
-161                <category android:name="android.intent.category.BROWSABLE" />
-161-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:17-78
-161-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:27-75
-162
-163                <data
-163-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:41:17-44:51
-164                    android:host="firebase.auth"
-164-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:42:21-49
-165                    android:path="/"
-165-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:43:21-37
-166                    android:scheme="genericidp" />
-166-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:44:21-48
-167            </intent-filter>
-168        </activity>
-169        <activity
-169-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:47:9-64:20
-170            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-170-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:48:13-79
-171            android:excludeFromRecents="true"
-171-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:49:13-46
-172            android:exported="true"
-172-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:50:13-36
-173            android:launchMode="singleTask"
-173-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:51:13-44
-174            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-174-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:52:13-72
-175            <intent-filter>
-175-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:53:13-63:29
-176                <action android:name="android.intent.action.VIEW" />
-176-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:17-69
-176-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:25-66
-177
-178                <category android:name="android.intent.category.DEFAULT" />
-178-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:17-76
-178-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:27-73
-179                <category android:name="android.intent.category.BROWSABLE" />
-179-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:17-78
-179-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:27-75
+136-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:19:9-21:40
+137            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+137-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-97
+138            android:exported="false" />
+138-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-37
+139        <receiver
+139-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:22:9-31:20
+140            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+140-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:23:13-101
+141            android:exported="false" >
+141-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-37
+142            <intent-filter>
+142-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:25:13-30:29
+143                <action android:name="android.intent.action.BOOT_COMPLETED" />
+143-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:26:17-79
+143-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:26:25-76
+144                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+144-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:27:17-84
+144-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:27:25-81
+145                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+145-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:28:17-82
+145-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:28:25-79
+146                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+146-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:29:17-82
+146-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:29:25-79
+147            </intent-filter>
+148        </receiver>
+149        <receiver
+149-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-17:20
+150            android:name="com.pravera.flutter_foreground_task.service.BootReceiver"
+150-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-84
+151            android:enabled="true"
+151-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-35
+152            android:exported="true" >
+152-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-36
+153            <intent-filter>
+153-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-16:29
+154                <action android:name="android.intent.action.BOOT_COMPLETED" />
+154-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:26:17-79
+154-->[:flutter_local_notifications] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:26:25-76
+155            </intent-filter>
+156        </receiver>
+157        <receiver
+157-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:18:9-21:40
+158            android:name="com.pravera.flutter_foreground_task.service.RestartReceiver"
+158-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-87
+159            android:enabled="true"
+159-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-35
+160            android:exported="false" />
+160-->[:flutter_foreground_task] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_foreground_task/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-37
+161        <receiver
+161-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:11:9-15:47
+162            android:name="com.pravera.flutter_activity_recognition.service.ActivityRecognitionIntentReceiver"
+162-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-110
+163            android:enabled="true"
+163-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-35
+164            android:exported="true" />
+164-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-36
+165
+166        <service
+166-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:17:9-21:72
+167            android:name="com.pravera.flutter_activity_recognition.service.ActivityRecognitionIntentService"
+167-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-109
+168            android:enabled="true"
+168-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-35
+169            android:exported="false"
+169-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-37
+170            android:permission="android.permission.BIND_JOB_SERVICE" />
+170-->[:flutter_activity_recognition] /Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-69
+171
+172        <activity
+172-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:29:9-46:20
+173            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+173-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:30:13-80
+174            android:excludeFromRecents="true"
+174-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:31:13-46
+175            android:exported="true"
+175-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:32:13-36
+176            android:launchMode="singleTask"
+176-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:33:13-44
+177            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+177-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:34:13-72
+178            <intent-filter>
+178-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:35:13-45:29
+179                <action android:name="android.intent.action.VIEW" />
+179-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:17-69
+179-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:25-66
 180
-181                <data
-181-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:41:17-44:51
-182                    android:host="firebase.auth"
-182-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:42:21-49
-183                    android:path="/"
-183-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:43:21-37
-184                    android:scheme="recaptcha" />
-184-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:44:21-48
-185            </intent-filter>
-186        </activity>
-187
-188        <uses-library
-188-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-189            android:name="androidx.window.extensions"
-189-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-190            android:required="false" />
-190-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-191        <uses-library
-191-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-192            android:name="androidx.window.sidecar"
-192-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-193            android:required="false" />
-193-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-194
-195        <provider
-195-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
-196            android:name="com.google.firebase.provider.FirebaseInitProvider"
-196-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:26:13-77
-197            android:authorities="parking.assistant.parking_assistant.firebaseinitprovider"
-197-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:27:13-72
-198            android:directBootAware="true"
-198-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:28:13-43
-199            android:exported="false"
-199-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:29:13-37
-200            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
-200-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:30:13-36
-201        <uses-library
-201-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
-202            android:name="org.apache.http.legacy"
-202-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
-203            android:required="false" />
-203-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
-204
-205        <receiver
-205-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:29:9-33:20
-206            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-206-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:30:13-85
-207            android:enabled="true"
-207-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:31:13-35
-208            android:exported="false" >
-208-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:32:13-37
-209        </receiver>
-210
-211        <service
-211-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:35:9-38:40
-212            android:name="com.google.android.gms.measurement.AppMeasurementService"
-212-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:36:13-84
-213            android:enabled="true"
-213-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:37:13-35
-214            android:exported="false" />
-214-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:38:13-37
-215        <service
-215-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:39:9-43:72
-216            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-216-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:40:13-87
-217            android:enabled="true"
-217-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:41:13-35
-218            android:exported="false"
-218-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:42:13-37
-219            android:permission="android.permission.BIND_JOB_SERVICE" />
-219-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:43:13-69
-220
-221        <activity
-221-->[com.google.android.gms:play-services-base:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/e090e3ef9b4a3d117dca789da4abeb87/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-222            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-222-->[com.google.android.gms:play-services-base:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/e090e3ef9b4a3d117dca789da4abeb87/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-223            android:exported="false"
-223-->[com.google.android.gms:play-services-base:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/e090e3ef9b4a3d117dca789da4abeb87/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-224            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-224-->[com.google.android.gms:play-services-base:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/e090e3ef9b4a3d117dca789da4abeb87/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-225    </application>
-226
-227</manifest>
+181                <category android:name="android.intent.category.DEFAULT" />
+181-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:17-76
+181-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:27-73
+182                <category android:name="android.intent.category.BROWSABLE" />
+182-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:17-78
+182-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:27-75
+183
+184                <data
+184-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:41:17-44:51
+185                    android:host="firebase.auth"
+185-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:42:21-49
+186                    android:path="/"
+186-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:43:21-37
+187                    android:scheme="genericidp" />
+187-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:44:21-48
+188            </intent-filter>
+189        </activity>
+190        <activity
+190-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:47:9-64:20
+191            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+191-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:48:13-79
+192            android:excludeFromRecents="true"
+192-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:49:13-46
+193            android:exported="true"
+193-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:50:13-36
+194            android:launchMode="singleTask"
+194-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:51:13-44
+195            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+195-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:52:13-72
+196            <intent-filter>
+196-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:53:13-63:29
+197                <action android:name="android.intent.action.VIEW" />
+197-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:17-69
+197-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:25-66
+198
+199                <category android:name="android.intent.category.DEFAULT" />
+199-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:17-76
+199-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:27-73
+200                <category android:name="android.intent.category.BROWSABLE" />
+200-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:17-78
+200-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:27-75
+201
+202                <data
+202-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:41:17-44:51
+203                    android:host="firebase.auth"
+203-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:42:21-49
+204                    android:path="/"
+204-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:43:21-37
+205                    android:scheme="recaptcha" />
+205-->[com.google.firebase:firebase-auth:21.3.0] /Users/chaudhery/.gradle/caches/transforms-3/ced7a2f8f102632bce0bf37bd32ddfb8/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:44:21-48
+206            </intent-filter>
+207        </activity>
+208
+209        <uses-library
+209-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+210            android:name="androidx.window.extensions"
+210-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+211            android:required="false" />
+211-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+212        <uses-library
+212-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+213            android:name="androidx.window.sidecar"
+213-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+214            android:required="false" />
+214-->[androidx.window:window:1.0.0-beta04] /Users/chaudhery/.gradle/caches/transforms-3/5c9cf8edbe92de71b7795a771e909048/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+215
+216        <provider
+216-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+217            android:name="com.google.firebase.provider.FirebaseInitProvider"
+217-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+218            android:authorities="parking.assistant.parking_assistant.firebaseinitprovider"
+218-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+219            android:directBootAware="true"
+219-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+220            android:exported="false"
+220-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+221            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
+221-->[com.google.firebase:firebase-common:20.3.2] /Users/chaudhery/.gradle/caches/transforms-3/33ef9b88a0fad2f885bb17b2662723c8/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+222        <uses-library
+222-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
+223            android:name="org.apache.http.legacy"
+223-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
+224            android:required="false" />
+224-->[com.google.android.gms:play-services-maps:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
+225
+226        <receiver
+226-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:29:9-33:20
+227            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+227-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:30:13-85
+228            android:enabled="true"
+228-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:31:13-35
+229            android:exported="false" >
+229-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:32:13-37
+230        </receiver>
+231
+232        <service
+232-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:35:9-38:40
+233            android:name="com.google.android.gms.measurement.AppMeasurementService"
+233-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:36:13-84
+234            android:enabled="true"
+234-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:37:13-35
+235            android:exported="false" />
+235-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:38:13-37
+236        <service
+236-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:39:9-43:72
+237            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+237-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:40:13-87
+238            android:enabled="true"
+238-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:41:13-35
+239            android:exported="false"
+239-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:42:13-37
+240            android:permission="android.permission.BIND_JOB_SERVICE" />
+240-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/chaudhery/.gradle/caches/transforms-3/d4938cccb0472de611ef9e88497d5164/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:43:13-69
+241
+242        <activity
+242-->[com.google.android.gms:play-services-base:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/e090e3ef9b4a3d117dca789da4abeb87/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+243            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+243-->[com.google.android.gms:play-services-base:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/e090e3ef9b4a3d117dca789da4abeb87/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+244            android:exported="false"
+244-->[com.google.android.gms:play-services-base:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/e090e3ef9b4a3d117dca789da4abeb87/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+245            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+245-->[com.google.android.gms:play-services-base:18.1.0] /Users/chaudhery/.gradle/caches/transforms-3/e090e3ef9b4a3d117dca789da4abeb87/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+246    </application>
+247
+248</manifest>

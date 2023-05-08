@@ -108,6 +108,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="/Volumes/Software Drive/Freelance Work Space/parking-assistant/android@@:flutter_local_notifications::release"
+      jars="/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/.transforms/da2b2a11ff660afacf799951688e9526/transformed/out/jars/classes.jar"
+      resolved="com.dexterous.flutterlocalnotifications:flutter_local_notifications:unspecified"
+      folder="/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_local_notifications/.transforms/da2b2a11ff660afacf799951688e9526/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="/Volumes/Software Drive/Freelance Work Space/parking-assistant/android@@:path_provider_android::release"
       jars="/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/path_provider_android/.transforms/3fe812e355dfa7899d097196e7eb8d07/transformed/out/jars/classes.jar"
       resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
@@ -924,6 +937,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="androidx.media:media:1.1.0@aar"
+      jars="/Users/chaudhery/.gradle/caches/transforms-3/2804ad2604b71d95c2a80856733f2fdd/transformed/media-1.1.0/jars/classes.jar"
+      resolved="androidx.media:media:1.1.0"
+      folder="/Users/chaudhery/.gradle/caches/transforms-3/2804ad2604b71d95c2a80856733f2fdd/transformed/media-1.1.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="com.google.android.gms:play-services-maps:18.1.0@aar"
       jars="/Users/chaudhery/.gradle/caches/transforms-3/4a99527c065eff034a5a9650d45a3225/transformed/jetified-play-services-maps-18.1.0/jars/classes.jar"
       resolved="com.google.android.gms:play-services-maps:18.1.0"
@@ -976,7 +1002,7 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="com.google.code.gson:gson:2.8.6@jar"
-      jars="/Users/chaudhery/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.6/9180733b7df8542621dc12e21e87557e8c99b8cb/gson-2.8.6.jar"
-      resolved="com.google.code.gson:gson:2.8.6"/>
+      name="com.google.code.gson:gson:2.8.9@jar"
+      jars="/Users/chaudhery/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.9/8a432c1d6825781e21a02db2e2c33c5fde2833b9/gson-2.8.9.jar"
+      resolved="com.google.code.gson:gson:2.8.9"/>
 </libraries>
