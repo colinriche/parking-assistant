@@ -1680,79 +1680,81 @@ class _HomeScreen_State extends State<HomeScreen> {
 
 
   void _FetchDashboardData() async {
+    FirebaseDatabase database = FirebaseDatabase.instance;
+    DatabaseReference parkingRef =
+    database.reference().child('parking_locations');
 
-    User? user = auth.currentUser;
-    if (user != null) {
-      String uid = user.uid;
-      print('Current user UID: $uid');
-      try {
-        FirebaseDatabase database = FirebaseDatabase.instance;
-        DatabaseReference reference = database.reference().child('users').child(uid);
+    // Retrieve parking locations from Firebase Realtime Database
+    parkingRef.onValue.listen((event) async {
+      Map<dynamic, dynamic> parkingsMap = event.snapshot.value as Map<dynamic, dynamic>;
+      if (parkingsMap != null) {
+        List<Map<String, dynamic>> tempParking = [];
+        parkingsMap.forEach((key, value) {
+          Map<String, dynamic> parking = Map.from(value);
 
-        reference.onValue.listen((event) {
-          DataSnapshot snapshot = event.snapshot;
-          if (snapshot.value != null) {
-            Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
+          tempParking.add({
+            'name': parking['name'].toString(),
+            'address': parking['address'].toString(),
+            'latitude': parking['latitude'].toString(),
+            'longitude': parking['longitude'].toString(),
+            // add other properties as needed
+          });
 
-            name = data['name'];
-            bool isVisitedParking = data['isVisited_Parking'];
-            is_visited = isVisitedParking;
-            if(is_visited){
-              String address = data['address'];
-              double latitude = data['latitude'].toDouble();
-              double longitude = data['longitude'].toDouble();
-              _address = address;
-              _latitude = latitude;
-              _longitude = longitude;
-              is_visited = true;
-
-            }else{
-              is_visited = isVisitedParking;
-            }
-
-          } else {
-            // Handle the case where the snapshot value is null or doesn't exist
-            print('No data available');
-          }
-        }, onError: (error) {
-          // Handle any errors that may occur while listening for changes
-          print('Error: $error');
         });
 
-        DatabaseReference parkingRef =
-        database.reference().child('parking_locations');
-
-        // Retrieve parking locations from Firebase Realtime Database
-        parkingRef.onValue.listen((event) async {
-          Map<dynamic, dynamic> parkingsMap = event.snapshot.value as Map<dynamic, dynamic>;
-          if (parkingsMap != null) {
-            List<Map<String, dynamic>> tempParking = [];
-            parkingsMap.forEach((key, value) {
-              Map<String, dynamic> parking = Map.from(value);
-
-              tempParking.add({
-                'name': parking['name'].toString(),
-                'address': parking['address'].toString(),
-                'latitude': parking['latitude'].toString(),
-                'longitude': parking['longitude'].toString(),
-                // add other properties as needed
-              });
-
-            });
-
-            setState(() {
-              parking = tempParking;
-              _FetchDashboardData();
-            });
-          }
+        setState(() {
+          parking = tempParking;
+          _FetchDashboardData();
         });
-
-      } catch (error) {
-        print(error);
       }
-    } else {
-      print('User is not authenticated.');
-    }
+    });
+
+    // User? user = auth.currentUser;
+    // if (user != null) {
+    //   String uid = user.uid;
+    //   print('Current user UID: $uid');
+    //   try {
+    //     FirebaseDatabase database = FirebaseDatabase.instance;
+    //     DatabaseReference reference = database.reference().child('users').child(uid);
+    //
+    //     reference.onValue.listen((event) {
+    //       DataSnapshot snapshot = event.snapshot;
+    //       if (snapshot.value != null) {
+    //         Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
+    //
+    //         name = data['name'];
+    //         bool isVisitedParking = data['isVisited_Parking'];
+    //         is_visited = isVisitedParking;
+    //         if(is_visited){
+    //           String address = data['address'];
+    //           double latitude = data['latitude'].toDouble();
+    //           double longitude = data['longitude'].toDouble();
+    //           _address = address;
+    //           _latitude = latitude;
+    //           _longitude = longitude;
+    //           is_visited = true;
+    //
+    //         }else{
+    //           is_visited = isVisitedParking;
+    //         }
+    //
+    //       } else {
+    //         // Handle the case where the snapshot value is null or doesn't exist
+    //         print('No data available');
+    //       }
+    //     }, onError: (error) {
+    //       // Handle any errors that may occur while listening for changes
+    //       print('Error: $error');
+    //     });
+    //
+    //
+    //
+    //   } catch (error) {
+    //     print(error);
+    //   }
+    // } else {
+    //   print('User is not authenticated.');
+    // }
 
     /*geofancing code*/
 
