@@ -47,39 +47,8 @@ class _HomeScreen_State extends State<HomeScreen> {
       printDevLog: false,
       geofenceRadiusSortType: GeofenceRadiusSortType.DESC);
 
-  var _geofenceList = <Geofence>[
-    Geofence(
-        id: 'place_1',
-        latitude: 52.0404497,
-        longitude: -0.7493338,
-        radius: [
-          GeofenceRadius(id: 'radius_25m', length: 15)]
-    ),
-    Geofence(
-      id: 'place_2',
-      latitude: 52.0408197,
-      longitude: -0.7504911,
-      radius: [
-        GeofenceRadius(id: 'radius_25m', length: 15),
-      ],
-    ),
-    Geofence(
-      id: 'place_3',
-      latitude: 52.03938873985288,
-      longitude: -0.7513414498805204,
-      radius: [
-        GeofenceRadius(id: 'radius_25m', length: 15),
-      ],
-    ),
+   final _geofenceList = <Geofence>[
 
-    Geofence(
-      id: 'place_4',
-      latitude: 52.040336047305516,
-      longitude: -0.7479872236508751,
-      radius: [
-        GeofenceRadius(id: 'radius_25m', length: 15),
-      ],
-    ),
     Geofence(
       id: 'place_5',
       latitude: 33.6183207,
@@ -87,7 +56,7 @@ class _HomeScreen_State extends State<HomeScreen> {
       radius: [
         GeofenceRadius(id: 'radius_25m', length: 15),
       ],
-    ),
+    )
   ];
 
   Future<void> _onGeofenceStatusChanged(
@@ -130,14 +99,8 @@ class _HomeScreen_State extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _geofenceService.addGeofenceStatusChangeListener(_onGeofenceStatusChanged);
-      _geofenceService.addLocationChangeListener(_onLocationChanged);
-      _geofenceService.addLocationServicesStatusChangeListener(_onLocationServicesStatusChanged);
-      _geofenceService.addStreamErrorListener(_onError);
-      _geofenceService.start(_geofenceList).catchError(_onError);
-    });
     _FetchDashboardData();
+
   }
 
   Widget build(BuildContext context) {
@@ -241,7 +204,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                               bottom: 43,
                             ),
                             child: Text(
-                              "Hi, "+name,
+                              "Here to assist",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtMontserratBold22,
@@ -744,14 +707,24 @@ class _HomeScreen_State extends State<HomeScreen> {
     FirebaseDatabase database = FirebaseDatabase.instance;
     DatabaseReference parkingRef =
     database.reference().child('parking_locations');
-
-    // Retrieve parking locations from Firebase Realtime Database
     parkingRef.onValue.listen((event) async {
       Map<dynamic, dynamic> parkingsMap = event.snapshot.value as Map<dynamic, dynamic>;
       if (parkingsMap != null) {
         List<Map<String, dynamic>> tempParking = [];
         parkingsMap.forEach((key, value) {
           Map<String, dynamic> parking = Map.from(value);
+          // _geofenceList.add(
+          //   Geofence(
+          //     id: parking['id'].toString(),
+          //     latitude: parking['latitude'].toDouble(),
+          //     longitude: parking['longitude'].toDouble(),
+          //     radius: [
+          //       GeofenceRadius(
+          //           id: parking['id'].toString(),
+          //           length:25)
+          //     ],
+          //   ),
+          // );
 
           tempParking.add({
             'name': parking['name'].toString(),
@@ -765,7 +738,13 @@ class _HomeScreen_State extends State<HomeScreen> {
 
         setState(() {
           parking = tempParking;
-          _FetchDashboardData();
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            _geofenceService.addGeofenceStatusChangeListener(_onGeofenceStatusChanged);
+            _geofenceService.addLocationChangeListener(_onLocationChanged);
+            _geofenceService.addLocationServicesStatusChangeListener(_onLocationServicesStatusChanged);
+            _geofenceService.addStreamErrorListener(_onError);
+            _geofenceService.start(_geofenceList).catchError(_onError);
+          });
         });
       }
     });
