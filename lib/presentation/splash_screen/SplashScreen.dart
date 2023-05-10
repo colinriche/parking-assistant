@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:parking_assistant/presentation/home_one_screen/home_screen.dart';
 import 'package:parking_assistant/core/app_export.dart';
 import 'package:parking_assistant/presentation/login_screen/login_screen.dart';
-
 import '../../core/utils/firebase/AuthService.dart';
 
 class Splashscreen extends StatefulWidget {

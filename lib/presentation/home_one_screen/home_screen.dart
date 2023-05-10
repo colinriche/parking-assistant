@@ -47,7 +47,7 @@ class _HomeScreen_State extends State<HomeScreen> {
       printDevLog: false,
       geofenceRadiusSortType: GeofenceRadiusSortType.DESC);
 
-  final _geofenceList = <Geofence>[
+  var _geofenceList = <Geofence>[
     Geofence(
         id: 'place_1',
         latitude: 52.0404497,
@@ -112,7 +112,6 @@ class _HomeScreen_State extends State<HomeScreen> {
     _geofenceStreamController.sink.add(geofence);
   }
 
-
   void _onLocationChanged(Location location) {
   }
   void _onLocationServicesStatusChanged(bool status) {
@@ -139,7 +138,6 @@ class _HomeScreen_State extends State<HomeScreen> {
       _geofenceService.start(_geofenceList).catchError(_onError);
     });
     _FetchDashboardData();
-
   }
 
   Widget build(BuildContext context) {
@@ -570,7 +568,6 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                         ],
                                                       ),
                                                     )
-
                                                   ],
                                                 ),
                                               ),

@@ -74,6 +74,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "dbus",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/dbus-0.7.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "email_validator",
       "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/email_validator-2.1.17",
       "packageUri": "lib/",
@@ -207,15 +213,21 @@
     },
     {
       "name": "flutter_local_notifications",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications-5.0.0+4",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications-14.0.0+1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_local_notifications_linux",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_local_notifications_platform_interface",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications_platform_interface-3.0.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_map",
@@ -597,7 +609,7 @@
     },
     {
       "name": "timezone",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/timezone-0.7.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/timezone-0.9.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -680,7 +692,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-05-10T09:42:31.553512Z",
+  "generated": "2023-05-10T12:52:31.544739Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

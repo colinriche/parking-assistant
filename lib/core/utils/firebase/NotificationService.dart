@@ -7,12 +7,9 @@ class NotificationService {
   static Future<void> initialize() async {
     const AndroidInitializationSettings initializationSettingsAndroid =
     AndroidInitializationSettings('@mipmap/ic_launcher');
-    final IOSInitializationSettings initializationSettingsIOS =
-    IOSInitializationSettings();
     final InitializationSettings initializationSettings =
     InitializationSettings(
       android: initializationSettingsAndroid,
-      iOS: initializationSettingsIOS,
     );
     await flutterLocalNotificationsPlugin
         .initialize(initializationSettings);
@@ -24,7 +21,6 @@ class NotificationService {
     AndroidNotificationDetails(
       'channel_id',
       'channel_name',
-      'channel_description',
       importance: Importance.max,
       priority: Priority.high,
     );
