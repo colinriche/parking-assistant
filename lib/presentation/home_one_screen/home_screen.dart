@@ -16,10 +16,9 @@ import 'package:parking_assistant/widgets/app_bar/custom_app_bar.dart';
 import 'package:parking_assistant/widgets/custom_icon_button.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-enum fenceStatus { ENTER, EXIT }
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
+  List<Geofence> geofenceList;
+  HomeScreen({required this.geofenceList});
   @override
   _HomeScreen_State createState() => _HomeScreen_State();
 }
@@ -46,18 +45,6 @@ class _HomeScreen_State extends State<HomeScreen> {
       allowMockLocations: false,
       printDevLog: false,
       geofenceRadiusSortType: GeofenceRadiusSortType.DESC);
-
-   final _geofenceList = <Geofence>[
-
-    Geofence(
-      id: 'place_5',
-      latitude: 33.6183207,
-      longitude: 72.9550881,
-      radius: [
-        GeofenceRadius(id: 'radius_25m', length: 15),
-      ],
-    )
-  ];
 
   Future<void> _onGeofenceStatusChanged(
       Geofence geofence,
@@ -98,8 +85,15 @@ class _HomeScreen_State extends State<HomeScreen> {
 
   @override
   void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _geofenceService.addGeofenceStatusChangeListener(_onGeofenceStatusChanged);
+      _geofenceService.addLocationChangeListener(_onLocationChanged);
+      _geofenceService.addLocationServicesStatusChangeListener(_onLocationServicesStatusChanged);
+      _geofenceService.addStreamErrorListener(_onError);
+      _FetchDashboardData();
+      _geofenceService.start(geofenceList).catchError(_onError);
+    });
     super.initState();
-    _FetchDashboardData();
 
   }
 
@@ -711,20 +705,8 @@ class _HomeScreen_State extends State<HomeScreen> {
       Map<dynamic, dynamic> parkingsMap = event.snapshot.value as Map<dynamic, dynamic>;
       if (parkingsMap != null) {
         List<Map<String, dynamic>> tempParking = [];
-        parkingsMap.forEach((key, value) {
-          Map<String, dynamic> parking = Map.from(value);
-          // _geofenceList.add(
-          //   Geofence(
-          //     id: parking['id'].toString(),
-          //     latitude: parking['latitude'].toDouble(),
-          //     longitude: parking['longitude'].toDouble(),
-          //     radius: [
-          //       GeofenceRadius(
-          //           id: parking['id'].toString(),
-          //           length:25)
-          //     ],
-          //   ),
-          // );
+        await Future.forEach(parkingsMap.entries, (entry) async {
+          Map<String, dynamic> parking = Map.from(entry.value);
 
           tempParking.add({
             'name': parking['name'].toString(),
@@ -733,82 +715,17 @@ class _HomeScreen_State extends State<HomeScreen> {
             'longitude': parking['longitude'].toString(),
             // add other properties as needed
           });
-
         });
 
         setState(() {
           parking = tempParking;
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            _geofenceService.addGeofenceStatusChangeListener(_onGeofenceStatusChanged);
-            _geofenceService.addLocationChangeListener(_onLocationChanged);
-            _geofenceService.addLocationServicesStatusChangeListener(_onLocationServicesStatusChanged);
-            _geofenceService.addStreamErrorListener(_onError);
-            _geofenceService.start(_geofenceList).catchError(_onError);
-          });
         });
       }
     });
 
-    // User? user = auth.currentUser;
-    // if (user != null) {
-    //   String uid = user.uid;
-    //   print('Current user UID: $uid');
-    //   try {
-    //     FirebaseDatabase database = FirebaseDatabase.instance;
-    //     DatabaseReference reference = database.reference().child('users').child(uid);
-    //
-    //     reference.onValue.listen((event) {
-    //       DataSnapshot snapshot = event.snapshot;
-    //       if (snapshot.value != null) {
-    //         Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
-    //
-    //         name = data['name'];
-    //         bool isVisitedParking = data['isVisited_Parking'];
-    //         is_visited = isVisitedParking;
-    //         if(is_visited){
-    //           String address = data['address'];
-    //           double latitude = data['latitude'].toDouble();
-    //           double longitude = data['longitude'].toDouble();
-    //           _address = address;
-    //           _latitude = latitude;
-    //           _longitude = longitude;
-    //           is_visited = true;
-    //
-    //         }else{
-    //           is_visited = isVisitedParking;
-    //         }
-    //
-    //       } else {
-    //         // Handle the case where the snapshot value is null or doesn't exist
-    //         print('No data available');
-    //       }
-    //     }, onError: (error) {
-    //       // Handle any errors that may occur while listening for changes
-    //       print('Error: $error');
-    //     });
-    //
-    //
-    //
-    //   } catch (error) {
-    //     print(error);
-    //   }
-    // } else {
-    //   print('User is not authenticated.');
-    // }
-
     /*geofancing code*/
-
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _geofenceService.addGeofenceStatusChangeListener(_onGeofenceStatusChanged);
-      _geofenceService.addLocationChangeListener(_onLocationChanged);
-      _geofenceService.addLocationServicesStatusChangeListener(_onLocationServicesStatusChanged);
-      _geofenceService.addStreamErrorListener(_onError);
-      _geofenceService.start(_geofenceList).catchError(_onError);
-    });
-
-    /*geofancing code*/
-
   }
+
 
 
   void _Update_DashboardData() async {

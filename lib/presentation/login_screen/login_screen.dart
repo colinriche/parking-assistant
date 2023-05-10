@@ -160,8 +160,8 @@ class Login_Screen extends StatelessWidget {
                             String? result = await _auth.loginWithEmailAndPassword(email, password);
                             if (result != null) {
                               if(result != 'No user found for that email.' && result != 'Wrong password provided for that user.' && email != null){
-                                Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                                // Navigator.of(context).pushReplacement(
+                                //     MaterialPageRoute(builder: (context) => HomeScreen()));
                               }else{
                                 print('is_error ---------> '+result);
                               }

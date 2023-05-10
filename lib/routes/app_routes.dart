@@ -36,7 +36,7 @@ class AppRoutes {
     signUpScreen: (context) => SignUpScreen(),
     loginScreen: (context) => Login_Screen(),
     splashScreen: (context) => Splashscreen(),
-    homeScreen: (context) => HomeScreen(),
+    // homeScreen: (context) => HomeScreen(),
     appNavigationScreen: (context) => AppNavigationScreen()
   };
 }
