@@ -715,7 +715,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                                 .start,
                                                             children: [
                                                               Text(
-                                                                "_address",
+                                                                _address,
                                                                 overflow: TextOverflow
                                                                     .ellipsis,
                                                                 textAlign:
@@ -1252,7 +1252,7 @@ class _HomeScreen_State extends State<HomeScreen> {
         reference.update({
           'address': '123 Main St',
           'latitude': 32.7749,
-          'isVisited_Parking': false,
+          'isVisited_Parking': true,
           'longitude': 72.4194,
         }).then((_) {
           print('Data updated successfully.');

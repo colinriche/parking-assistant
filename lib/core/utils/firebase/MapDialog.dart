@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
@@ -13,28 +15,25 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
   Location _location = Location();
   LatLng? _lastPosition;
   Set<Marker> _markers = {};
-  Set<Polygon> _polygons = {};
-
-  LatLng _fixedLocation = LatLng(33.671568, 72.997692);
+  Set<Polyline> _polylines = {};
+  LatLng _fixedLocation = LatLng(33.6454867, 72.9727491);
 
   @override
   void initState() {
     super.initState();
-    _polygons.add(
-      Polygon(
-        polygonId: PolygonId("area"),
+    _polylines.add(
+      Polyline(
+        polylineId: PolylineId("route"),
         visible: true,
         points: [_fixedLocation],
-        fillColor: Colors.blue.withOpacity(0.3),
-        strokeColor: Colors.blue,
-        strokeWidth: 3,
+        color: Colors.blue,
+        width: 3,
       ),
     );
 
     _location.onLocationChanged.listen((LocationData currentLocation) {
       setState(() {
-        final newLatLng =
-        LatLng(currentLocation.latitude!, currentLocation.longitude!);
+        final newLatLng = LatLng(currentLocation.latitude!, currentLocation.longitude!);
         _lastPosition = newLatLng;
         _markers.clear();
         _markers.add(
@@ -46,15 +45,14 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
         );
 
         if (_lastPosition != null) {
-          _polygons.clear();
-          _polygons.add(
-            Polygon(
-              polygonId: PolygonId("area"),
+          _polylines.clear();
+          _polylines.add(
+            Polyline(
+              polylineId: PolylineId("route"),
               visible: true,
               points: [_fixedLocation, newLatLng],
-              fillColor: Colors.blue.withOpacity(0.3),
-              strokeColor: Colors.blue,
-              strokeWidth: 3,
+              color: Colors.blue,
+              width: 3,
             ),
           );
         }
@@ -78,7 +76,7 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
           onMapCreated: (controller) => _mapController = controller,
           initialCameraPosition: CameraPosition(target: LatLng(0, 0)),
           myLocationEnabled: true,
-          polygons: _polygons,
+          polylines: _polylines,
           markers: _markers,
         ),
       ),
