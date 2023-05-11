@@ -96,7 +96,7 @@ class _SplashscreenState extends State<Splashscreen> {
               radius: [
                 GeofenceRadius(
                   id: '1',
-                  length: 25,
+                  length: parking['radius'].toDouble(),
                 ),
               ],
             ),

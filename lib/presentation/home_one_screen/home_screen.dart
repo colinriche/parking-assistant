@@ -53,17 +53,18 @@ class _HomeScreen_State extends State<HomeScreen> {
       Location location,
       ) async {
     _geofenceStreamController.sink.add(geofence);
-
           if (geofence.status.name == "ENTER") {
             NotificationService.showNotification(
               'Parking Assistance',
               'You have entered the parking area.',
             );
+
           } else if (geofence.status.name == "EXIT") {
             NotificationService.showNotification(
               'Parking Assistance',
               'You have exited the parking area.',
             );
+
           }
     _geofenceStreamController.sink.add(geofence);
   }
@@ -85,6 +86,7 @@ class _HomeScreen_State extends State<HomeScreen> {
 
   @override
   void initState() {
+    List<Geofence> geofenceList = widget.geofenceList;
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _geofenceService.addGeofenceStatusChangeListener(_onGeofenceStatusChanged);
       _geofenceService.addLocationChangeListener(_onLocationChanged);
@@ -94,7 +96,6 @@ class _HomeScreen_State extends State<HomeScreen> {
       _geofenceService.start(geofenceList).catchError(_onError);
     });
     super.initState();
-
   }
 
   Widget build(BuildContext context) {
