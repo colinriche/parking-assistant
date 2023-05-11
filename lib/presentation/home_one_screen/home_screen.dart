@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:geofence_service/geofence_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../core/utils/firebase/AuthService.dart';
+import '../../core/utils/firebase/MapDialog.dart';
 import '../../core/utils/firebase/NotificationService.dart';
 import '../home_one_screen/widgets/listsetpickuppo_item_widget.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
@@ -112,8 +113,8 @@ class _HomeScreen_State extends State<HomeScreen> {
     return StreamBuilder<Geofence>(
       stream: _geofenceStreamController.stream,
       builder: (context, snapshot) {
-        final content = snapshot.data?.id ?? '';
-        final content2 = snapshot.data?.status.name ?? '';
+        // final content = snapshot.data?.id ?? '';
+        // final content2 = snapshot.data?.status.name ?? '';
 
         return SafeArea(
           child: Scaffold(
@@ -196,10 +197,10 @@ class _HomeScreen_State extends State<HomeScreen> {
                             padding: getPadding(
                               left: 16,
                               top: 15,
-                              bottom: 43,
+                              bottom: 15,
                             ),
                             child: Text(
-                              "Here to assist",
+                              "Effortless Parking",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtMontserratBold22,
@@ -409,6 +410,207 @@ class _HomeScreen_State extends State<HomeScreen> {
                                   ),
                                 ),
                               ),
+                              // Align(
+                              //   alignment: Alignment.topCenter,
+                              //   child: Container(
+                              //       height: getVerticalSize(
+                              //         250,
+                              //       ),
+                              //       width: getHorizontalSize(
+                              //         362,
+                              //       ),
+                              //       // data area
+                              //       child: Stack(
+                              //         alignment: Alignment.bottomLeft,
+                              //         children: [
+                              //           Align(
+                              //             alignment: Alignment.center,
+                              //             child: Padding(
+                              //               padding: getPadding(
+                              //                 left: 10,
+                              //                 right: 9,
+                              //               ),
+                              //               child: OutlineGradientButton(
+                              //                 padding: EdgeInsets.only(
+                              //                   left: getHorizontalSize(
+                              //                     1,
+                              //                   ),
+                              //                   top: getVerticalSize(
+                              //                     1,
+                              //                   ),
+                              //                   right: getHorizontalSize(
+                              //                     1,
+                              //                   ),
+                              //                   bottom: getVerticalSize(
+                              //                     1,
+                              //                   ),
+                              //                 ),
+                              //                 strokeWidth: getHorizontalSize(
+                              //                   1,
+                              //                 ),
+                              //                 gradient: LinearGradient(
+                              //                   begin: Alignment(
+                              //                     0,
+                              //                     0,
+                              //                   ),
+                              //                   end: Alignment(
+                              //                     1,
+                              //                     1,
+                              //                   ),
+                              //                   colors: [
+                              //                     ColorConstant.whiteA700,
+                              //                     ColorConstant.whiteA70000,
+                              //                   ],
+                              //                 ),
+                              //                 corners: Corners(
+                              //                   topLeft: Radius.circular(
+                              //                     16,
+                              //                   ),
+                              //                   topRight: Radius.circular(
+                              //                     16,
+                              //                   ),
+                              //                   bottomLeft: Radius.circular(
+                              //                     16,
+                              //                   ),
+                              //                   bottomRight: Radius.circular(
+                              //                     16,
+                              //                   ),
+                              //                 ),
+                              //                 child: Container(
+                              //                   padding: getPadding(
+                              //                     left: 12,
+                              //                     top: 11,
+                              //                     right: 12,
+                              //                     bottom: 11,
+                              //                   ),
+                              //                   decoration:
+                              //                   AppDecoration.outline.copyWith(
+                              //                     borderRadius: BorderRadiusStyle
+                              //                         .roundedBorder16,
+                              //                   ),
+                              //                   child: Column(
+                              //                     mainAxisSize: MainAxisSize.min,
+                              //                     mainAxisAlignment:
+                              //                     MainAxisAlignment.center,
+                              //                     children: [
+                              //                       Padding(
+                              //                         padding: getPadding(
+                              //                           left: 2,
+                              //                           top: 70,
+                              //                           bottom:70,
+                              //                           right: 4,
+                              //                         ),
+                              //                         child: Row(
+                              //                           mainAxisAlignment:
+                              //                           MainAxisAlignment
+                              //                               .center,
+                              //                           children: [
+                              //                             Column(
+                              //                               crossAxisAlignment:
+                              //                               CrossAxisAlignment
+                              //                                   .center,
+                              //                               mainAxisAlignment:
+                              //                               MainAxisAlignment
+                              //                                   .center,
+                              //                               children: [
+                              //                                 Text(
+                              //                                   "No Record Found.",
+                              //                                   overflow: TextOverflow
+                              //                                       .ellipsis,
+                              //                                   textAlign:
+                              //                                   TextAlign.center,
+                              //                                   style: AppStyle
+                              //                                       .txtMontserratMedium14Bluegray80001,
+                              //                                 )
+                              //                               ],
+                              //                             )
+                              //                           ],
+                              //                         ),
+                              //                       )
+                              //                     ],
+                              //                   ),
+                              //                 ),
+                              //               ),
+                              //             ),
+                              //           ),
+                              //           Align(
+                              //             alignment: Alignment.bottomLeft,
+                              //             child: Container(
+                              //               height: getSize(
+                              //                 20,
+                              //               ),
+                              //               width: getSize(
+                              //                 20,
+                              //               ),
+                              //               margin: getMargin(
+                              //                 bottom: 45,
+                              //               ),
+                              //               decoration: BoxDecoration(
+                              //                 borderRadius: BorderRadius.circular(
+                              //                   getHorizontalSize(
+                              //                     10,
+                              //                   ),
+                              //                 ),
+                              //                 gradient: LinearGradient(
+                              //                   begin: Alignment(
+                              //                     1,
+                              //                     0.5,
+                              //                   ),
+                              //                   end: Alignment(
+                              //                     0,
+                              //                     0.5,
+                              //                   ),
+                              //                   colors: [
+                              //                     ColorConstant.gray10001,
+                              //                     ColorConstant.gray10002,
+                              //                     ColorConstant.gray50,
+                              //                   ],
+                              //                 ),
+                              //               ),
+                              //             ),
+                              //           ),
+                              //           Align(
+                              //             alignment: Alignment.bottomRight,
+                              //             child: Container(
+                              //               height: getSize(
+                              //                 20,
+                              //               ),
+                              //               width: getSize(
+                              //                 20,
+                              //               ),
+                              //               margin: getMargin(
+                              //                 bottom: 45,
+                              //               ),
+                              //               decoration: BoxDecoration(
+                              //                 borderRadius: BorderRadius.circular(
+                              //                   getHorizontalSize(
+                              //                     10,
+                              //                   ),
+                              //                 ),
+                              //                 gradient: LinearGradient(
+                              //                   begin: Alignment(
+                              //                     1,
+                              //                     0.5,
+                              //                   ),
+                              //                   end: Alignment(
+                              //                     0,
+                              //                     0.5,
+                              //                   ),
+                              //                   colors: [
+                              //                     ColorConstant.gray10003,
+                              //                     ColorConstant.gray50,
+                              //                     ColorConstant.gray10001,
+                              //                   ],
+                              //                 ),
+                              //               ),
+                              //             ),
+                              //           ),
+                              //         ],
+                              //       )
+                              //
+                              //   ),
+                              // ),
+
                               Align(
                                 alignment: Alignment.topCenter,
                                 child: Container(
@@ -419,7 +621,280 @@ class _HomeScreen_State extends State<HomeScreen> {
                                       362,
                                     ),
                                     // data area
-                                    child: Stack(
+                                    child: is_visited ?
+                                    Stack(
+                                      alignment: Alignment.bottomLeft,
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.center,
+                                          child: Padding(
+                                            padding: getPadding(
+                                              left: 10,
+                                              right: 9,
+                                            ),
+                                            child: OutlineGradientButton(
+                                              padding: EdgeInsets.only(
+                                                left: getHorizontalSize(
+                                                  1,
+                                                ),
+                                                top: getVerticalSize(
+                                                  1,
+                                                ),
+                                                right: getHorizontalSize(
+                                                  1,
+                                                ),
+                                                bottom: getVerticalSize(
+                                                  1,
+                                                ),
+                                              ),
+                                              strokeWidth: getHorizontalSize(
+                                                1,
+                                              ),
+                                              gradient: LinearGradient(
+                                                begin: Alignment(
+                                                  0,
+                                                  0,
+                                                ),
+                                                end: Alignment(
+                                                  1,
+                                                  1,
+                                                ),
+                                                colors: [
+                                                  ColorConstant.whiteA700,
+                                                  ColorConstant.whiteA70000,
+                                                ],
+                                              ),
+                                              corners: Corners(
+                                                topLeft: Radius.circular(
+                                                  16,
+                                                ),
+                                                topRight: Radius.circular(
+                                                  16,
+                                                ),
+                                                bottomLeft: Radius.circular(
+                                                  16,
+                                                ),
+                                                bottomRight: Radius.circular(
+                                                  16,
+                                                ),
+                                              ),
+                                              child: Container(
+                                                padding: getPadding(
+                                                  left: 12,
+                                                  top: 11,
+                                                  right: 12,
+                                                  bottom: 11,
+                                                ),
+                                                decoration:
+                                                AppDecoration.outline.copyWith(
+                                                  borderRadius: BorderRadiusStyle
+                                                      .roundedBorder16,
+                                                ),
+                                                child: Column(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                      padding: getPadding(
+                                                        left: 2,
+                                                        top: 12,
+                                                        right: 4,
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                            mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                            children: [
+                                                              Text(
+                                                                "_address",
+                                                                overflow: TextOverflow
+                                                                    .ellipsis,
+                                                                textAlign:
+                                                                TextAlign.left,
+                                                                style: AppStyle
+                                                                    .txtMontserratMedium14Bluegray80001,
+                                                              )
+                                                            ],
+                                                          ),
+                                                          CustomIconButton(
+                                                            height: 40,
+                                                            width: 40,
+                                                            margin: getMargin(
+                                                              bottom: 1,
+                                                            ),
+                                                            variant: IconButtonVariant
+                                                                .OutlineBlack9000f,
+                                                            child: CustomImageView(
+                                                              svgPath: ImageConstant
+                                                                  .imgQrcode,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding: getPadding(
+                                                        top: 22,
+                                                        right: 4,
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                        children: [
+                                                          Text(
+                                                            ''+_latitude.toString(),
+                                                            overflow:
+                                                            TextOverflow.ellipsis,
+                                                            textAlign: TextAlign.left,
+                                                            style: AppStyle
+                                                                .txtMontserratMedium18,
+                                                          ),
+                                                          CustomImageView(
+                                                            svgPath: ImageConstant
+                                                                .imgGroup159,
+                                                            height: getVerticalSize(
+                                                              8,
+                                                            ),
+                                                            width: getHorizontalSize(
+                                                              117,
+                                                            ),
+                                                            margin: getMargin(
+                                                              top: 7,
+                                                              bottom: 6,
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            ''+_longitude.toString(),
+                                                            overflow:
+                                                            TextOverflow.ellipsis,
+                                                            textAlign: TextAlign.left,
+                                                            style: AppStyle
+                                                                .txtMontserratMedium18,
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding: getPadding(
+                                                        top: 18,
+                                                        right: 4,
+                                                        bottom: 18,
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                        children: [
+                                                          Text(
+                                                            "30 Apr, 2023",
+                                                            overflow:
+                                                            TextOverflow.ellipsis,
+                                                            textAlign: TextAlign.left,
+                                                            style: AppStyle
+                                                                .txtMontserratMedium14Bluegray30003,
+                                                          ),
+                                                          Text(
+                                                            "30 Apr, 2023",
+                                                            overflow:
+                                                            TextOverflow.ellipsis,
+                                                            textAlign: TextAlign.left,
+                                                            style: AppStyle
+                                                                .txtMontserratMedium14Bluegray30003,
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.bottomLeft,
+                                          child: Container(
+                                            height: getSize(
+                                              20,
+                                            ),
+                                            width: getSize(
+                                              20,
+                                            ),
+                                            margin: getMargin(
+                                              bottom: 45,
+                                            ),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(
+                                                getHorizontalSize(
+                                                  10,
+                                                ),
+                                              ),
+                                              gradient: LinearGradient(
+                                                begin: Alignment(
+                                                  1,
+                                                  0.5,
+                                                ),
+                                                end: Alignment(
+                                                  0,
+                                                  0.5,
+                                                ),
+                                                colors: [
+                                                  ColorConstant.gray10001,
+                                                  ColorConstant.gray10002,
+                                                  ColorConstant.gray50,
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.bottomRight,
+                                          child: Container(
+                                            height: getSize(
+                                              20,
+                                            ),
+                                            width: getSize(
+                                              20,
+                                            ),
+                                            margin: getMargin(
+                                              bottom: 45,
+                                            ),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(
+                                                getHorizontalSize(
+                                                  10,
+                                                ),
+                                              ),
+                                              gradient: LinearGradient(
+                                                begin: Alignment(
+                                                  1,
+                                                  0.5,
+                                                ),
+                                                end: Alignment(
+                                                  0,
+                                                  0.5,
+                                                ),
+                                                colors: [
+                                                  ColorConstant.gray10003,
+                                                  ColorConstant.gray50,
+                                                  ColorConstant.gray10001,
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ) : Stack(
                                       alignment: Alignment.bottomLeft,
                                       children: [
                                         Align(
@@ -521,11 +996,13 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                                 style: AppStyle
                                                                     .txtMontserratMedium14Bluegray80001,
                                                               )
+
                                                             ],
                                                           )
                                                         ],
                                                       ),
                                                     )
+
                                                   ],
                                                 ),
                                               ),
@@ -606,7 +1083,6 @@ class _HomeScreen_State extends State<HomeScreen> {
                                         ),
                                       ],
                                     )
-
                                 ),
                               ),
                             ],
@@ -662,12 +1138,12 @@ class _HomeScreen_State extends State<HomeScreen> {
                                           itemBuilder: (context, index) {
                                             return GestureDetector(
                                               onTap: () {
-                                                // showDialog(
-                                                //   context: context,
-                                                //   builder: (context) {
-                                                //     return MapAlertDialog();
-                                                //   },
-                                                // );
+                                                showDialog(
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return MapAlertDialog();
+                                                  },
+                                                );
                                               },
                                               child: ListsetpickuppoItemWidget(
                                                 title: parking[index]['name'],
@@ -700,6 +1176,41 @@ class _HomeScreen_State extends State<HomeScreen> {
 
   void _FetchDashboardData() async {
     FirebaseDatabase database = FirebaseDatabase.instance;
+    User? user = auth.currentUser;
+    if (user != null) {
+      String uid = user.uid;
+      DatabaseReference reference = database.reference().child('users').child(uid);
+      reference.onValue.listen((event) {
+        DataSnapshot snapshot = event.snapshot;
+        if (snapshot.value != null) {
+          Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
+
+          name = data['name'];
+          bool isVisitedParking = data['isVisited_Parking'];
+          is_visited = isVisitedParking;
+          if(is_visited){
+            String address = data['address'];
+            double latitude = data['latitude'].toDouble();
+            double longitude = data['longitude'].toDouble();
+            _address = address;
+            _latitude = latitude;
+            _longitude = longitude;
+            is_visited = true;
+
+          }else{
+            is_visited = isVisitedParking;
+          }
+
+        } else {
+          // Handle the case where the snapshot value is null or doesn't exist
+          print('No data available');
+        }
+      }, onError: (error) {
+        // Handle any errors that may occur while listening for changes
+        print('Error: $error');
+      });
+    }
+
     DatabaseReference parkingRef =
     database.reference().child('parking_locations');
     parkingRef.onValue.listen((event) async {
