@@ -1,8 +1,10 @@
 import 'dart:async';
 
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class MapAlertDialog extends StatefulWidget {
   @override
@@ -17,10 +19,12 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
   Set<Marker> _markers = {};
   Set<Polyline> _polylines = {};
   LatLng _fixedLocation = LatLng(33.6454867, 72.9727491);
+  FirebaseAuth auth = FirebaseAuth.instance;
 
   @override
   void initState() {
     super.initState();
+
     _polylines.add(
       Polyline(
         polylineId: PolylineId("route"),
@@ -86,10 +90,41 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
           child: Text('CANCEL'),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+         //   _Update_DashboardData();
+          },
           child: Text('SAVE'),
         ),
       ],
     );
+  }
+
+  void _Update_DashboardData(String name,String address,double latitude,double longitude, bool isVisited_Parking) async {
+    User? user = auth.currentUser;
+    if (user != null) {
+      String uid = user.uid;
+      print('Current user UID: $uid');
+      try {
+        FirebaseDatabase database = FirebaseDatabase.instance;
+        DatabaseReference reference = database.reference().child('users').child(uid);
+
+        reference.update({
+          'address': address,
+          'latitude': latitude,
+          'isVisited_Parking': isVisited_Parking,
+          'longitude': longitude,
+        }).then((_) {
+          print('Data updated successfully.');
+        }).catchError((error) {
+          print('Data could not be updated: $error');
+        });
+
+      } catch (error) {
+        print(error);
+      }
+    } else {
+      print('User is not authenticated.');
+    }
+
   }
 }
