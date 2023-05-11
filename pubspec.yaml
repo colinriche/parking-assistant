@@ -48,7 +48,6 @@ dependencies:
   google_maps_flutter: ^2.2.6
   flutter_map: ^4.0.0
   geofence_service: ^3.5.0
-  # flutter_local_notifications: ^5.0.0+1
   flutter_local_notifications: 14.0.0+1
 
 dev_dependencies:

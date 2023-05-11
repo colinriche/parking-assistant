@@ -6,9 +6,17 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../../../presentation/login_screen/login_screen.dart';
+
 class MapAlertDialog extends StatefulWidget {
+  late String name,address;
+  late double latitude, longitude;
+  late bool isVisited_Parking;
+
+  MapAlertDialog({required this.name, required this.address,required this.latitude,required this.longitude,required this.isVisited_Parking});
   @override
   _MapAlertDialogState createState() => _MapAlertDialogState();
+
 }
 
 class _MapAlertDialogState extends State<MapAlertDialog> {
@@ -18,12 +26,22 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
   LatLng? _lastPosition;
   Set<Marker> _markers = {};
   Set<Polyline> _polylines = {};
-  LatLng _fixedLocation = LatLng(33.6454867, 72.9727491);
   FirebaseAuth auth = FirebaseAuth.instance;
+  late String name,address;
+  late double latitude,longitude;
+  late bool is_visited;
 
   @override
   void initState() {
     super.initState();
+
+    name = widget.name;
+    address = widget.address;
+    latitude = widget.latitude;
+    longitude = widget.longitude;
+    is_visited = widget.isVisited_Parking;
+
+    LatLng _fixedLocation = LatLng(33.6454867, 72.9727491);
 
     _polylines.add(
       Polyline(
@@ -54,7 +72,7 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
             Polyline(
               polylineId: PolylineId("route"),
               visible: true,
-              points: [_fixedLocation, newLatLng],
+              points: [LatLng(latitude, longitude), newLatLng],
               color: Colors.blue,
               width: 3,
             ),
@@ -66,6 +84,7 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
             CameraPosition(target: newLatLng, zoom: 11),
           ));
         }
+
       });
     });
   }
@@ -91,7 +110,8 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
         ),
         TextButton(
           onPressed: () {
-         //   _Update_DashboardData();
+            print('print ----> '+address);
+            _Update_DashboardData(name, address, latitude, longitude, is_visited);
           },
           child: Text('SAVE'),
         ),
@@ -123,8 +143,9 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
         print(error);
       }
     } else {
-      print('User is not authenticated.');
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => Login_Screen()),
+      );
     }
-
   }
 }

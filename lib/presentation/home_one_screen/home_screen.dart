@@ -940,7 +940,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                 showDialog(
                                                   context: context,
                                                   builder: (context) {
-                                                    return MapAlertDialog();
+                                                    return MapAlertDialog(name: parking[index]['name'], address: parking[index]['address'], latitude: double.parse(parking[index]['latitude']),longitude: double.parse(parking[index]['longitude']), isVisited_Parking: true);
                                                   },
                                                 );
                                               },
@@ -1033,39 +1033,6 @@ class _HomeScreen_State extends State<HomeScreen> {
         });
       }
     });
-
-    /*geofancing code*/
-  }
-
-
-
-  void _Update_DashboardData(String name,String address,double latitude,double longitude, bool isVisited_Parking) async {
-    User? user = auth.currentUser;
-    if (user != null) {
-      String uid = user.uid;
-      print('Current user UID: $uid');
-      try {
-        FirebaseDatabase database = FirebaseDatabase.instance;
-        DatabaseReference reference = database.reference().child('users').child(uid);
-
-        reference.update({
-          'address': address,
-          'latitude': latitude,
-          'isVisited_Parking': isVisited_Parking,
-          'longitude': longitude,
-        }).then((_) {
-          print('Data updated successfully.');
-        }).catchError((error) {
-          print('Data could not be updated: $error');
-        });
-
-      } catch (error) {
-        print(error);
-      }
-    } else {
-      print('User is not authenticated.');
-    }
-
   }
 }
 

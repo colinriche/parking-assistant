@@ -33,7 +33,7 @@ class _SplashscreenState extends State<Splashscreen> {
         );
       }else{
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => Login_Screen()),
+          MaterialPageRoute(builder: (context) => HomeScreen(geofenceList: _geofenceList)),
         );
       }
     } catch (error) {
