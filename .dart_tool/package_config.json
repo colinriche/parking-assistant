@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "_flutterfire_internals",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.1.1",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "args",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/args-2.4.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/args-2.4.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -63,9 +63,9 @@
     },
     {
       "name": "crypto",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/crypto-3.0.2",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/crypto-3.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.19"
     },
     {
       "name": "cupertino_icons",
@@ -93,7 +93,7 @@
     },
     {
       "name": "ffi",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/ffi-2.0.1",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/ffi-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -105,55 +105,55 @@
     },
     {
       "name": "firebase_auth",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_auth-4.4.2",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_auth-4.6.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_auth_platform_interface",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_auth_platform_interface-6.13.1",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_auth_platform_interface-6.15.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_auth_web",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_auth_web-5.3.2",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_auth_web-5.5.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_core",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_core-2.10.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_core-2.12.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_core_platform_interface",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-4.6.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-4.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_core_web",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_core_web-2.3.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_core_web-2.5.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_database",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_database-10.1.1",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_database-10.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_database_platform_interface",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_database_platform_interface-0.2.3+1",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_database_platform_interface-0.2.5",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "firebase_database_web",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_database_web-0.2.2+1",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/firebase_database_web-0.2.3",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -219,13 +219,13 @@
     },
     {
       "name": "flutter_local_notifications_linux",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.0+1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "flutter_local_notifications_platform_interface",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.0.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.0.0+1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -303,9 +303,9 @@
     },
     {
       "name": "google_maps_flutter_android",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.4.13",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.4.14",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.18"
     },
     {
       "name": "google_maps_flutter_ios",
@@ -429,7 +429,7 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/path_provider-2.0.14",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/path_provider-2.0.15",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -441,7 +441,7 @@
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.2",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.3",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -513,7 +513,7 @@
     },
     {
       "name": "shared_preferences",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/shared_preferences-2.1.0",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/shared_preferences-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -525,7 +525,7 @@
     },
     {
       "name": "shared_preferences_foundation",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.1",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.2",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -573,7 +573,7 @@
     },
     {
       "name": "sqflite",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/sqflite-2.2.8",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/sqflite-2.2.8+2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -639,9 +639,9 @@
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/typed_data-1.3.1",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "unicode",
@@ -681,7 +681,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/win32-4.1.3",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/win32-4.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -693,9 +693,9 @@
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/xdg_directories-0.2.0+3",
+      "rootUri": "file:///Users/chaudhery/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "xml",
@@ -710,7 +710,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-05-11T15:42:34.666811Z",
+  "generated": "2023-05-15T15:02:02.784225Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

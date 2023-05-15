@@ -135,7 +135,9 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
           'longitude': longitude,
         }).then((_) {
           print('Data updated successfully.');
+          Navigator.of(context).pop();
         }).catchError((error) {
+          Navigator.of(context).pop();
           print('Data could not be updated: $error');
         });
 

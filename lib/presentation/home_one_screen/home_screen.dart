@@ -17,6 +17,8 @@ import 'package:parking_assistant/widgets/app_bar/custom_app_bar.dart';
 import 'package:parking_assistant/widgets/custom_icon_button.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
+import '../login_screen/login_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   List<Geofence> geofenceList;
   HomeScreen({required this.geofenceList});
@@ -55,12 +57,14 @@ class _HomeScreen_State extends State<HomeScreen> {
       ) async {
     _geofenceStreamController.sink.add(geofence);
           if (geofence.status.name == "ENTER") {
+            await NotificationService.initialize(); // Ensure the service is initialized
             NotificationService.showNotification(
               'Parking Assistance',
               'You have entered the parking area.',
             );
 
           } else if (geofence.status.name == "EXIT") {
+            await NotificationService.initialize(); // Ensure the service is initialized
             NotificationService.showNotification(
               'Parking Assistance',
               'You have exited the parking area.',
@@ -937,12 +941,21 @@ class _HomeScreen_State extends State<HomeScreen> {
                                           itemBuilder: (context, index) {
                                             return GestureDetector(
                                               onTap: () {
-                                                showDialog(
-                                                  context: context,
-                                                  builder: (context) {
-                                                    return MapAlertDialog(name: parking[index]['name'], address: parking[index]['address'], latitude: double.parse(parking[index]['latitude']),longitude: double.parse(parking[index]['longitude']), isVisited_Parking: true);
-                                                  },
-                                                );
+                                                User? user = auth.currentUser;
+                                                if (user != null) {
+                                                  showDialog(
+                                                    context: context,
+                                                    builder: (context) {
+                                                      return MapAlertDialog(name: parking[index]['name'], address: parking[index]['address'], latitude: double.parse(parking[index]['latitude']),longitude: double.parse(parking[index]['longitude']), isVisited_Parking: true);
+                                                    },
+                                                  );
+
+                                                }else {
+                                                  Navigator.of(context).pushReplacement(
+                                                    MaterialPageRoute(builder: (context) => Login_Screen()),
+                                                  );
+                                                }
+
                                               },
                                               child: ListsetpickuppoItemWidget(
                                                 title: parking[index]['name'],

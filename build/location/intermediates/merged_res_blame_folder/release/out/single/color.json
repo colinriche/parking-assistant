@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/location/intermediates/merged_res/release/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/28ac3602f43a3b7f298f37f688e19b59/transformed/jetified-play-services-base-16.0.1/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/location/intermediates/merged_res/release/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/28ac3602f43a3b7f298f37f688e19b59/transformed/jetified-play-services-base-16.0.1/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/location/intermediates/merged_res/release/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/28ac3602f43a3b7f298f37f688e19b59/transformed/jetified-play-services-base-16.0.1/res/color/common_google_signin_btn_text_light.xml"
+    }
+]

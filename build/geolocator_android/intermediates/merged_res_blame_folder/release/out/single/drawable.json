@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/notification_bg.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/aee6bcf100250b4da6af345dbf21bc13/transformed/core-1.6.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/notification_bg_low.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/aee6bcf100250b4da6af345dbf21bc13/transformed/core-1.6.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/aee6bcf100250b4da6af345dbf21bc13/transformed/core-1.6.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/notification_icon_background.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/aee6bcf100250b4da6af345dbf21bc13/transformed/core-1.6.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/geolocator_android/intermediates/merged_res/release/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/e9ec010f9006cba5da43379cfea2440e/transformed/jetified-play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+    }
+]

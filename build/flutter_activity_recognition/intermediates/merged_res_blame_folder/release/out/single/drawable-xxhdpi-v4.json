@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_res/release/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/68aa90bad836edffef0c1b327631b9c9/transformed/jetified-play-services-base-17.5.0/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_res/release/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/68aa90bad836edffef0c1b327631b9c9/transformed/jetified-play-services-base-17.5.0/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_res/release/drawable-xxhdpi-v4/googleg_standard_color_18.png",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/68aa90bad836edffef0c1b327631b9c9/transformed/jetified-play-services-base-17.5.0/res/drawable-xxhdpi-v4/googleg_standard_color_18.png"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_res/release/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/68aa90bad836edffef0c1b327631b9c9/transformed/jetified-play-services-base-17.5.0/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_res/release/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/68aa90bad836edffef0c1b327631b9c9/transformed/jetified-play-services-base-17.5.0/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Volumes/Software Drive/Freelance Work Space/parking-assistant/build/flutter_activity_recognition/intermediates/merged_res/release/drawable-xxhdpi-v4/googleg_disabled_color_18.png",
+        "source": "/Users/chaudhery/.gradle/caches/transforms-3/68aa90bad836edffef0c1b327631b9c9/transformed/jetified-play-services-base-17.5.0/res/drawable-xxhdpi-v4/googleg_disabled_color_18.png"
+    }
+]
