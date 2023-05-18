@@ -30,18 +30,24 @@ class _SplashscreenState extends State<Splashscreen> {
       if (await _auth.islogin()){
         // _auth.signOut();
 
-        // DirectionScreen
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => DirectionScreen(name: "parking[index]['name']", address: "parking[index]['address']", latitude: 32.43548953,longitude: 72.23432, isVisitedParking: true)),
-        );
-      }else{
-        // Navigator.of(context).pushReplacement(
-        //   MaterialPageRoute(builder: (context) => HomeScreen(geofenceList: _geofenceList)),
-        // );
+
 
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => DirectionScreen(name: "parking[index]['name']", address: "parking[index]['address']", latitude: 32.43548953,longitude: 72.23432, isVisitedParking: true)),
+          MaterialPageRoute(builder: (context) => HomeScreen(geofenceList: _geofenceList)),
         );
+
+        // DirectionScreen
+        // Navigator.of(context).pushReplacement(
+        //   MaterialPageRoute(builder: (context) => DirectionScreen(name: "parking[index]['name']", address: "parking[index]['address']", latitude: 32.43548953,longitude: 72.23432, isVisitedParking: true)),
+        // );
+      }else{
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => HomeScreen(geofenceList: _geofenceList)),
+        );
+        // DirectionScreen
+        // Navigator.of(context).pushReplacement(
+        //   MaterialPageRoute(builder: (context) => DirectionScreen(name: "parking[index]['name']", address: "parking[index]['address']", latitude: 32.43548953,longitude: 72.23432, isVisitedParking: true)),
+        // );
       }
     } catch (error) {
       print(error);
