@@ -8,6 +8,7 @@ import 'package:parking_assistant/presentation/home_one_screen/home_screen.dart'
 import 'package:parking_assistant/core/app_export.dart';
 import 'package:parking_assistant/presentation/login_screen/login_screen.dart';
 import '../../core/utils/firebase/AuthService.dart';
+import '../direction_screen/direction_screen.dart';
 
 class Splashscreen extends StatefulWidget {
   Splashscreen({Key? key}) : super(key: key);
@@ -28,12 +29,18 @@ class _SplashscreenState extends State<Splashscreen> {
     try {
       if (await _auth.islogin()){
         // _auth.signOut();
+
+        // DirectionScreen
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeScreen(geofenceList: _geofenceList)),
+          MaterialPageRoute(builder: (context) => DirectionScreen(name: "parking[index]['name']", address: "parking[index]['address']", latitude: 32.43548953,longitude: 72.23432, isVisitedParking: true)),
         );
       }else{
+        // Navigator.of(context).pushReplacement(
+        //   MaterialPageRoute(builder: (context) => HomeScreen(geofenceList: _geofenceList)),
+        // );
+
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeScreen(geofenceList: _geofenceList)),
+          MaterialPageRoute(builder: (context) => DirectionScreen(name: "parking[index]['name']", address: "parking[index]['address']", latitude: 32.43548953,longitude: 72.23432, isVisitedParking: true)),
         );
       }
     } catch (error) {

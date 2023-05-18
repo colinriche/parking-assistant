@@ -32,7 +32,7 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> routes = {
     aboutAppScreen: (context) => AboutAppScreen(),
-    directionScreen: (context) => DirectionScreen(),
+    directionScreen: (context) => DirectionScreen(name: "parking[index]['name']", address: "parking[index]['address']", latitude: 32.43548953,longitude: 72.23432, isVisitedParking: true),
     signUpScreen: (context) => SignUpScreen(),
     loginScreen: (context) => Login_Screen(),
     splashScreen: (context) => Splashscreen(),

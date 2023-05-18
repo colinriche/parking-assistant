@@ -1,158 +1,95 @@
 import 'dart:async';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'package:location/location.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+import '../../../presentation/login_screen/login_screen.dart';
 
 class MapAlertDialog extends StatefulWidget {
-  final String name;
-  final String address;
-  final double latitude;
-  final double longitude;
-  final bool isVisitedParking;
+  late String name, address;
+  late double latitude, longitude;
+  late bool isVisited_Parking;
 
-  MapAlertDialog({
-    required this.name,
-    required this.address,
-    required this.latitude,
-    required this.longitude,
-    required this.isVisitedParking,
-  });
+  MapAlertDialog(
+      {required this.name,
+        required this.address,
+        required this.latitude,
+        required this.longitude,
+        required this.isVisited_Parking});
 
   @override
   _MapAlertDialogState createState() => _MapAlertDialogState();
 }
 
 class _MapAlertDialogState extends State<MapAlertDialog> {
-  Completer<GoogleMapController> _mapControllerCompleter = Completer();
-  Set<Polyline> _polylines = {};
+  GoogleMapController? _mapController;
 
-  // Define your API key
-  final String apiKey = 'AIzaSyCxzZvKT560MJWr4AGMdtExenoqrc2CCrY';
+  Location _location = Location();
+  LatLng? _lastPosition;
+  Set<Marker> _markers = {};
+  Set<Polygon> _polygons = {}; // Updated to polygons
+  FirebaseAuth auth = FirebaseAuth.instance;
+  late String name, address;
+  late double latitude, longitude;
+  late bool is_visited;
 
   @override
   void initState() {
     super.initState();
-    _fetchRoute();
-  }
 
-  Future<void> _fetchRoute() async {
-    final response = await http.get(Uri.parse(
-        'https://maps.googleapis.com/maps/api/directions/json?origin=${widget.latitude},${widget.longitude}&destination=${widget.latitude},${widget.longitude}&key=$apiKey'));
+    name = widget.name;
+    address = widget.address;
+    latitude = widget.latitude;
+    longitude = widget.longitude;
+    is_visited = widget.isVisited_Parking;
 
-    if (response.statusCode == 200) {
-      final decodedResponse = jsonDecode(response.body);
-
-      final points =
-      decodedResponse['routes'][0]['overview_polyline']['points'];
-
+    _location.onLocationChanged.listen((LocationData currentLocation) {
       setState(() {
-        _polylines.clear();
-        _polylines.add(Polyline(
-          polylineId: PolylineId('route'),
-          points: _decodePolyline(points),
-          color: Colors.blue,
-          width: 5,
-        ));
+        final newLatLng =
+        LatLng(currentLocation.latitude!, currentLocation.longitude!);
+        _lastPosition = newLatLng;
+        _markers.clear();
+
+
+        if (_lastPosition != null) {
+          _polygons.clear();
+
+          _polygons.add(
+            Polygon(
+              polygonId: PolygonId("route"),
+              visible: true,
+              points: [LatLng(latitude, longitude), newLatLng],
+              fillColor: Colors.deepPurple,
+              strokeColor:  Colors.deepPurple,
+              strokeWidth: 2,
+            ),
+          );
+        }
+
+        if (_mapController != null) {
+          _mapController!.animateCamera(CameraUpdate.newCameraPosition(
+            CameraPosition(target: newLatLng, zoom: 14),
+          ));
+        }
       });
-
-      _fitBounds();
-    } else {
-      print('Error ${response.statusCode}');
-    }
-  }
-
-  List<LatLng> _decodePolyline(String encoded) {
-    List<LatLng> decodedPolyline = [];
-    int index = 0;
-    int lat = 0;
-    int lng = 0;
-    int byte = 0;
-
-    while (index < encoded.length) {
-      int shift = 0;
-      int result = 0;
-
-      do {
-        byte = encoded.codeUnitAt(index++) - 63;
-        result |= (byte & 0x1F) << (shift * 5);
-        shift++;
-      } while (byte >= 0x20);
-
-      int dlat = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
-      lat += dlat;
-
-      shift = 0;
-      result = 0;
-
-      do {
-        byte = encoded.codeUnitAt(index++) - 63;
-        result |= (byte & 0x1F) << (shift * 5);
-        shift++;
-      } while (byte >= 0x20);
-
-      int dlng = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
-      lng += dlng;
-
-      double latitude = lat / 1e5;
-      double longitude = lng / 1e5;
-
-      decodedPolyline.add(LatLng(latitude, longitude));
-    }
-
-    return decodedPolyline;
-  }
-
-  void _fitBounds() async {
-    final GoogleMapController controller = await _mapControllerCompleter.future;
-    final LatLngBounds bounds = _boundsFromLatLngList(_polylines.first.points);
-    controller.animateCamera(CameraUpdate.newLatLngBounds(bounds, 100));
-  }
-
- LatLngBounds _boundsFromLatLngList(List<LatLng> list) {
-    double minLat = double.infinity;
-    double maxLat = -double.infinity;
-    double minLng = double.infinity;
-    double maxLng = -double.infinity;
-
-    for (LatLng point in list) {
-      if (point.latitude < minLat) {
-        minLat = point.latitude;
-      }
-      if (point.latitude > maxLat) {
-        maxLat = point.latitude;
-      }
-      if (point.longitude < minLng) {
-        minLng = point.longitude;
-      }
-      if (point.longitude > maxLng) {
-        maxLng = point.longitude;
-      }
-    }
-
-    final LatLng southwest = LatLng(minLat, minLng);
-    final LatLng northeast = LatLng(maxLat, maxLng);
-
-    return LatLngBounds(southwest: southwest, northeast: northeast);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
       content: Container(
-        height: 450,
-        width: 500,
+        height: 350,
+        width: 400,
         child: GoogleMap(
-          onMapCreated: (controller) {
-            _mapControllerCompleter.complete(controller);
-          },
-          initialCameraPosition: CameraPosition(
-            target: LatLng(widget.latitude, widget.longitude),
-            zoom: 18,
-          ),
-          polylines: _polylines,
+          onMapCreated: (controller) => _mapController = controller,
+          initialCameraPosition: CameraPosition(target: LatLng(0, 0)),
+          myLocationEnabled: true,
+          polygons: _polygons, // Updated to polygons
+          markers: _markers,
         ),
       ),
       actions: [
@@ -162,14 +99,9 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
         ),
         TextButton(
           onPressed: () {
-            print('print ----> ' + widget.address);
-            _updateDashboardData(
-              widget.name,
-              widget.address,
-              widget.latitude,
-              widget.longitude,
-              widget.isVisitedParking,
-            );
+            print('print ----> ' + address);
+            _Update_DashboardData(
+                name, address, latitude, longitude, is_visited);
           },
           child: Text('SAVE'),
         ),
@@ -177,14 +109,14 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
     );
   }
 
-  void _updateDashboardData(
+  void _Update_DashboardData(
       String name,
       String address,
       double latitude,
       double longitude,
-      bool isVisitedParking,
+      bool isVisited_Parking,
       ) async {
-    User? user = FirebaseAuth.instance.currentUser;
+    User? user = auth.currentUser;
     if (user != null) {
       String uid = user.uid;
       print('Current user UID: $uid');
@@ -193,25 +125,30 @@ class _MapAlertDialogState extends State<MapAlertDialog> {
         DatabaseReference reference =
         database.reference().child('users').child(uid);
 
-        reference.update({
+        reference
+            .update({
           'address': address,
           'latitude': latitude,
-          'isVisitedParking': isVisitedParking,
+          'isVisited_Parking': isVisited_Parking,
           'longitude': longitude,
-        }).then((_) {
+        })
+            .then((_) {
           print('Data updated successfully.');
           Navigator.of(context).pop();
-        }).catchError((error) {
+        })
+            .catchError((error) {
           Navigator.of(context).pop();
           print('Data could not be updated: $error');
         });
+
       } catch (error) {
         print(error);
       }
     } else {
-      // Navigator.of(context).pushReplacement(
-      //   MaterialPageRoute(builder: (context) => LoginScreen()),
-      // );
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => Login_Screen()),
+      );
     }
   }
 }
+
