@@ -946,7 +946,7 @@ class _HomeScreen_State extends State<HomeScreen> {
                                                   showDialog(
                                                     context: context,
                                                     builder: (context) {
-                                                      return MapAlertDialog(name: parking[index]['name'], address: parking[index]['address'], latitude: double.parse(parking[index]['latitude']),longitude: double.parse(parking[index]['longitude']), isVisited_Parking: true);
+                                                      return MapAlertDialog(name: parking[index]['name'], address: parking[index]['address'], latitude: double.parse(parking[index]['latitude']),longitude: double.parse(parking[index]['longitude']), isVisitedParking: true);
                                                     },
                                                   );
 
